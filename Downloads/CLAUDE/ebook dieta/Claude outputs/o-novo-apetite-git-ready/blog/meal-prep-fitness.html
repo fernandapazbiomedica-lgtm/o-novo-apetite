@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Prep Fitness: Como Preparar Suas Refeições da Semana em 2 Horas | O Novo Apetite</title>
+    <meta name="description" content="Aprenda meal prep fitness passo a passo: prepare todas as refeições da semana em apenas 2 horas, economize tempo e mantenha sua dieta em dia.">
+    <link rel="canonical" href="https://onovoapetite.com.br/blog/meal-prep-fitness">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Meal Prep Fitness: Como Preparar Suas Refeições da Semana em 2 Horas">
+    <meta property="og:description" content="Aprenda meal prep fitness passo a passo: prepare todas as refeições da semana em apenas 2 horas, economize tempo e mantenha sua dieta em dia.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://onovoapetite.com.br/blog/meal-prep-fitness">
+    <meta property="og:site_name" content="O Novo Apetite">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Meal Prep Fitness: Como Preparar Suas Refeições da Semana em 2 Horas",
+        "description": "Aprenda meal prep fitness passo a passo: prepare todas as refeições da semana em apenas 2 horas, economize tempo e mantenha sua dieta em dia.",
+        "url": "https://onovoapetite.com.br/blog/meal-prep-fitness",
+        "datePublished": "2026-09-22",
+        "dateModified": "2026-09-22",
+        "author": {
+            "@type": "Organization",
+            "name": "O Novo Apetite"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "O Novo Apetite"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://onovoapetite.com.br/blog/meal-prep-fitness"
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card: #161616;
+            --border: rgba(255,255,255,0.08);
+            --red: #E53935;
+            --red-dark: #C62828;
+            --text: #e0e0e0;
+            --text-muted: #999;
+            --text-heading: #fff;
+            --font-body: 'Inter', sans-serif;
+            --font-heading: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            line-height: 1.8;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* NAV */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10,10,10,0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        .nav-cta {
+            background: var(--red) !important;
+            color: #fff !important;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600 !important;
+            transition: background 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--red-dark) !important;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .nav-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: #fff;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 120px 16px 60px;
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(229,57,53,0.12);
+            color: var(--red);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-heading);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .hero-meta span {
+            margin: 0 8px;
+        }
+
+        /* ARTICLE */
+        .article {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 16px 80px;
+        }
+
+        .article h2 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin: 52px 0 20px;
+            line-height: 1.3;
+        }
+
+        .article h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            margin: 36px 0 14px;
+        }
+
+        .article p {
+            margin-bottom: 18px;
+        }
+
+        .article ul, .article ol {
+            margin: 0 0 20px 24px;
+        }
+
+        .article li {
+            margin-bottom: 8px;
+        }
+
+        .article a {
+            color: var(--red);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+
+        .article a:hover {
+            color: #ff6659;
+        }
+
+        .article strong {
+            color: var(--text-heading);
+            font-weight: 600;
+        }
+
+        /* INFO CARD */
+        .info-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+        }
+
+        /* CTA BOX */
+        .cta-box {
+            background: linear-gradient(135deg, rgba(229,57,53,0.1), rgba(229,57,53,0.04));
+            border: 1px solid rgba(229,57,53,0.25);
+            border-radius: 16px;
+            padding: 36px 32px;
+            text-align: center;
+            margin: 48px 0;
+        }
+
+        .cta-box h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--text-heading);
+            margin: 0 0 12px;
+        }
+
+        .cta-box p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            font-size: 1rem;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--red);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.05rem;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta-btn:hover {
+            background: var(--red-dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin: 36px 0;
+            padding-left: 36px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 14px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--red), rgba(229,57,53,0.15));
+            border-radius: 2px;
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 32px;
+            padding: 20px 24px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .timeline-step::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -36px;
+            top: 20px;
+            width: 28px;
+            height: 28px;
+            background: var(--red);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .timeline-step h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-heading);
+            margin-bottom: 6px;
+        }
+
+        .timeline-step .time-label {
+            display: inline-block;
+            background: rgba(229,57,53,0.12);
+            color: var(--red);
+            padding: 2px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .timeline-step p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        /* MEAL TABLE */
+        .meal-table-wrap {
+            overflow-x: auto;
+            margin: 28px 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .meal-table {
+            width: 100%;
+            min-width: 580px;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+
+        .meal-table thead {
+            background: var(--card);
+        }
+
+        .meal-table th {
+            padding: 14px 16px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--text-heading);
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+        }
+
+        .meal-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text);
+        }
+
+        .meal-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .meal-table tr:nth-child(even) {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .meal-table .day-label {
+            font-weight: 600;
+            color: var(--red);
+            white-space: nowrap;
+        }
+
+        /* COST CARD */
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        .cost-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cost-item .value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--red);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .cost-item .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ERRORS LIST */
+        .error-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .error-item:last-child {
+            border-bottom: none;
+        }
+
+        .error-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: rgba(229,57,53,0.12);
+            color: var(--red);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .error-item p {
+            margin: 0;
+        }
+
+        .error-item strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* FOOTER */
+        .footer {
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 36px 16px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* FADE UP */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(10,10,10,0.98);
+                flex-direction: column;
+                padding: 20px 16px;
+                gap: 16px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .article h2 {
+                font-size: 1.45rem;
+            }
+
+            .info-card, .cta-box {
+                padding: 24px 20px;
+            }
+
+            .timeline {
+                padding-left: 32px;
+            }
+
+            .cost-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">O Novo <span>Apetite</span></a>
+            <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="/50receitasfitness/#calculadora">Calculadora TDEE</a></li>
+                <li><a href="https://pay.kiwify.com.br/A1O9KKX" class="nav-cta">Ebook R$ 19,90</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero fade-up">
+        <span class="hero-tag">Organização &amp; Nutrição</span>
+        <h1>Meal Prep Fitness: Como Preparar Suas Refeições da Semana em 2 Horas</h1>
+        <p class="hero-meta">22 de setembro de 2026 <span>·</span> 10 min de leitura</p>
+    </header>
+
+    <!-- ARTICLE -->
+    <article class="article">
+
+        <section class="fade-up">
+            <p>Você já passou a semana inteira comendo de qualquer jeito porque "não tinha tempo de cozinhar"? A falta de planejamento é o principal motivo pelo qual as pessoas abandonam dietas e perdem o controle da alimentação. O meal prep resolve exatamente isso: você dedica algumas horas do seu domingo e garante refeições saudáveis de segunda a sexta, sem estresse, sem improvisos e sem furar a dieta.</p>
+
+            <p>Neste guia completo, você vai aprender o passo a passo para montar um meal prep fitness do zero, mesmo que nunca tenha feito isso antes. Vamos cobrir desde os materiais até um cardápio pronto, com estimativa de custos e dicas para conservar tudo direitinho.</p>
+        </section>
+
+        <section class="fade-up">
+            <h2>O Que É Meal Prep e Por Que Funciona Para Emagrecer</h2>
+
+            <p>Meal prep vem do inglês <em>meal preparation</em>, que significa simplesmente "preparação de refeições". A ideia é cozinhar todas (ou a maioria) das suas refeições de uma só vez, geralmente no fim de semana, e armazená-las em potes individuais prontas para consumo.</p>
+
+            <p>Mas por que isso funciona tão bem para quem quer emagrecer ou ganhar massa? A resposta está no controle. Quando você prepara tudo com antecedência, consegue:</p>
+
+            <ul>
+                <li><strong>Controlar calorias e macros com precisão</strong>, pesando cada ingrediente antes do preparo</li>
+                <li><strong>Eliminar decisões impulsivas</strong>, como pedir delivery ou comer besteira na correria</li>
+                <li><strong>Economizar dinheiro</strong>, já que comprar em quantidade sai mais barato que comer fora</li>
+                <li><strong>Ganhar tempo durante a semana</strong>, liberando de 1 a 2 horas por dia</li>
+                <li><strong>Manter a consistência</strong>, que é o fator mais importante de qualquer dieta</li>
+            </ul>
+
+            <p>Se você está em um processo de <a href="deficit-calorico.html">déficit calórico para emagrecer</a>, o meal prep é praticamente obrigatório. Sem ele, fica muito difícil manter o controle ao longo da semana.</p>
+        </section>
+
+        <section class="fade-up">
+            <h2>Materiais Necessários Para Começar</h2>
+
+            <div class="info-card">
+                <h3>Kit Essencial do Meal Prep</h3>
+                <ul>
+                    <li><strong>Potes de vidro com tampa hermética</strong> (10 a 15 unidades). Prefira vidro: não mancha, não pega cheiro e pode ir ao micro-ondas</li>
+                    <li><strong>Balança de cozinha digital</strong> (precisão de 1g). Indispensável para acertar os macros</li>
+                    <li><strong>Tábuas de corte</strong> (pelo menos 2: uma para carnes, outra para vegetais)</li>
+                    <li><strong>Panelas antiaderentes</strong> de tamanhos variados</li>
+                    <li><strong>Assadeiras grandes</strong> para assar proteínas e legumes ao mesmo tempo</li>
+                    <li><strong>Papel alumínio e papel manteiga</strong></li>
+                    <li><strong>Etiquetas adesivas</strong> para marcar a data de preparo em cada pote</li>
+                    <li><strong>Temperos básicos:</strong> sal, pimenta, alho em pó, páprica, cúrcuma, ervas finas</li>
+                </ul>
+            </div>
+
+            <p>Você não precisa comprar tudo de uma vez. Comece com potes e balança, que são os dois itens mais importantes. O investimento inicial fica entre R$ 80 e R$ 150, e se paga rapidamente com a economia que você faz ao parar de comer fora.</p>
+        </section>
+
+        <section class="fade-up">
+            <h2>Passo a Passo do Meal Prep em 2 Horas</h2>
+
+            <p>Aqui está o roteiro completo, dividido em etapas com tempo estimado. Siga essa ordem para aproveitar ao máximo as 2 horas:</p>
+
+            <div class="timeline">
+                <div class="timeline-step" data-step="1">
+                    <h4>Planeje o Cardápio (feito na véspera)</h4>
+                    <span class="time-label">15 min na sexta ou sábado</span>
+                    <p>Escolha 2 opções de proteína, 2 de carboidrato e 3 de vegetais. Monte as combinações para almoço e jantar. Use nosso <a href="receitas-fitness-faceis.html">guia de receitas fitness fáceis</a> como referência.</p>
+                </div>
+
+                <div class="timeline-step" data-step="2">
+                    <h4>Faça a Lista de Compras e Vá ao Mercado</h4>
+                    <span class="time-label">40 min no sábado</span>
+                    <p>Anote quantidades exatas. Compre proteínas a granel e legumes da estação. Quanto mais objetiva for a lista, menos tempo você gasta no mercado.</p>
+                </div>
+
+                <div class="timeline-step" data-step="3">
+                    <h4>Ligue o Forno e Coloque Água Para Ferver</h4>
+                    <span class="time-label">0-5 min</span>
+                    <p>Comece pelo que leva mais tempo. Coloque frango ou carne no forno (temperados) e a água para o arroz ou batata-doce. Enquanto isso, avance para o próximo passo.</p>
+                </div>
+
+                <div class="timeline-step" data-step="4">
+                    <h4>Lave e Corte Todos os Vegetais</h4>
+                    <span class="time-label">5-25 min</span>
+                    <p>Brócolis, abobrinha, cenoura, pimentão. Corte tudo de uma vez. Parte vai ao forno com as proteínas, parte vai refogada na panela.</p>
+                </div>
+
+                <div class="timeline-step" data-step="5">
+                    <h4>Cozinhe Carboidratos e Refogue Vegetais</h4>
+                    <span class="time-label">25-55 min</span>
+                    <p>Arroz integral, batata-doce, macarrão integral. Enquanto cozinham, refogue os vegetais e prepare eventuais molhos ou caldos.</p>
+                </div>
+
+                <div class="timeline-step" data-step="6">
+                    <h4>Retire as Proteínas do Forno e Fatie</h4>
+                    <span class="time-label">55-70 min</span>
+                    <p>Deixe descansar 5 minutos antes de cortar. Fatie ou desfie. Tempere se necessário.</p>
+                </div>
+
+                <div class="timeline-step" data-step="7">
+                    <h4>Monte os Potes e Etiquete</h4>
+                    <span class="time-label">70-100 min</span>
+                    <p>Use a balança para porcionar proteína, carboidrato e vegetais em cada pote. Cole a etiqueta com a data. Potes do início da semana vão para a geladeira, o restante vai ao freezer.</p>
+                </div>
+
+                <div class="timeline-step" data-step="8">
+                    <h4>Limpeza e Organização</h4>
+                    <span class="time-label">100-120 min</span>
+                    <p>Lave tudo, organize a cozinha. Pronto! Você tem 10 refeições (ou mais) prontas para a semana.</p>
+                </div>
+            </div>
+
+            <p>A chave do meal prep eficiente é a execução em paralelo: enquanto o forno trabalha, você corta vegetais. Enquanto o arroz cozinha, você refoga. Depois de duas ou três semanas praticando, você vai conseguir fazer tudo em menos de 2 horas.</p>
+        </section>
+
+        <section class="fade-up">
+            <h2>Exemplo de Cardápio Semanal Fitness</h2>
+
+            <p>Este cardápio foi pensado para quem treina e busca uma alimentação com boa quantidade de proteína, carboidratos complexos e vegetais. Se você precisa de ideias para o <a href="cafe-da-manha-fitness.html">café da manhã fitness</a>, temos um artigo dedicado a isso.</p>
+
+            <div class="meal-table-wrap">
+                <table class="meal-table">
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Almoço</th>
+                            <th>Jantar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day-label">Segunda</td>
+                            <td>Frango grelhado + arroz integral + brócolis refogado</td>
+                            <td>Carne moída com abobrinha + batata-doce</td>
+                        </tr>
+                        <tr>
+                            <td class="day-label">Terça</td>
+                            <td>Carne moída com abobrinha + arroz integral + salada</td>
+                            <td>Frango desfiado + purê de batata-doce + vagem</td>
+                        </tr>
+                        <tr>
+                            <td class="day-label">Quarta</td>
+                            <td>Frango grelhado + macarrão integral + brócolis</td>
+                            <td>Omelete de legumes + arroz integral</td>
+                        </tr>
+                        <tr>
+                            <td class="day-label">Quinta</td>
+                            <td>Carne moída + arroz integral + cenoura refogada</td>
+                            <td>Frango grelhado + batata-doce + salada verde</td>
+                        </tr>
+                        <tr>
+                            <td class="day-label">Sexta</td>
+                            <td>Frango desfiado + macarrão integral + legumes</td>
+                            <td>Carne moída + purê de batata-doce + brócolis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Cada refeição tem aproximadamente <strong>400 a 550 calorias</strong>, com cerca de <strong>35-45g de proteína</strong>, <strong>40-55g de carboidratos</strong> e <strong>10-15g de gorduras</strong>. Para saber mais sobre como estruturar uma <a href="dieta-rica-proteina.html">dieta rica em proteína</a>, confira nosso guia completo.</p>
+        </section>
+
+        <section class="fade-up">
+            <h2>Dicas de Armazenamento e Conservação</h2>
+
+            <p>De nada adianta cozinhar tudo se a comida estragar antes de sexta-feira. Siga estas regras:</p>
+
+            <ul>
+                <li><strong>Geladeira:</strong> potes para consumo em até 3 dias (segunda a quarta) ficam na geladeira</li>
+                <li><strong>Freezer:</strong> potes para quinta e sexta vão direto ao freezer. Descongele na geladeira na noite anterior</li>
+                <li><strong>Espere esfriar:</strong> nunca coloque comida quente na geladeira. Deixe chegar à temperatura ambiente (no máximo 2 horas após o preparo)</li>
+                <li><strong>Potes bem fechados:</strong> use recipientes com vedação hermética para evitar troca de cheiros e ressecamento</li>
+                <li><strong>Molhos separados:</strong> se a refeição leva molho, guarde-o em um potinho à parte para não amolecer os alimentos</li>
+                <li><strong>Etiquetas com data:</strong> sempre marque o dia do preparo. Refeições na geladeira duram até 4 dias, no freezer até 3 meses</li>
+                <li><strong>Arroz e grãos:</strong> congelam muito bem e mantêm textura ao reaquecer</li>
+                <li><strong>Saladas cruas:</strong> não congele. Prepare no dia ou guarde lavada e seca em potes com papel-toalha</li>
+            </ul>
+        </section>
+
+        <section class="fade-up">
+            <h2>Quanto Custa um Meal Prep Por Semana</h2>
+
+            <p>Um dos maiores benefícios do meal prep é a economia. Veja uma estimativa baseada em preços médios de mercado em 2026:</p>
+
+            <div class="cost-grid">
+                <div class="cost-item">
+                    <span class="value">R$ 85</span>
+                    <span class="label">Proteínas (1,5kg frango + 1kg carne moída)</span>
+                </div>
+                <div class="cost-item">
+                    <span class="value">R$ 25</span>
+                    <span class="label">Carboidratos (arroz, batata-doce, macarrão)</span>
+                </div>
+                <div class="cost-item">
+                    <span class="value">R$ 30</span>
+                    <span class="label">Vegetais e temperos</span>
+                </div>
+                <div class="cost-item">
+                    <span class="value">R$ 140</span>
+                    <span class="label">Total semanal (10 refeições)</span>
+                </div>
+            </div>
+
+            <p>Isso dá aproximadamente <strong>R$ 14 por refeição</strong>. Compare com um almoço fora, que custa entre R$ 25 e R$ 45. Em um mês, a economia pode passar de R$ 500. Além de gastar menos, você come melhor e com as quantidades certas para o seu objetivo.</p>
+        </section>
+
+        <!-- CTA BOX -->
+        <div class="cta-box fade-up">
+            <h3>50 Receitas Fitness Prontas Para Seu Meal Prep</h3>
+            <p>Nosso ebook traz 50 receitas práticas, com macros calculados e lista de compras. Ideal para quem faz meal prep toda semana e quer variar o cardápio sem perder o controle.</p>
+            <a href="https://pay.kiwify.com.br/A1O9KKX" class="cta-btn">Quero o Ebook por R$ 19,90</a>
+        </div>
+
+        <section class="fade-up">
+            <h2>8 Erros Comuns no Meal Prep (e Como Evitar)</h2>
+
+            <div class="error-item">
+                <div class="error-icon">1</div>
+                <div>
+                    <p><strong>Preparar receitas muito elaboradas</strong>
+                    O meal prep precisa ser simples e replicável. Escolha 2 a 3 proteínas e carboidratos básicos e varie apenas os vegetais e temperos.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">2</div>
+                <div>
+                    <p><strong>Não usar balança</strong>
+                    "Colocar no olho" gera variações enormes nas calorias. Use a balança em todas as porções, especialmente nas proteínas e carboidratos.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">3</div>
+                <div>
+                    <p><strong>Congelar tudo de uma vez</strong>
+                    Nem tudo congela bem. Folhas verdes, tomate e pepino ficam péssimos após descongelar. Guarde esses itens frescos e consuma nos primeiros dias.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">4</div>
+                <div>
+                    <p><strong>Cozinhar demais os vegetais</strong>
+                    Vegetais al dente mantêm textura e nutrientes mesmo após reaquecer. Cozidos demais, ficam moles e sem graça no terceiro dia.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">5</div>
+                <div>
+                    <p><strong>Guardar comida quente na geladeira</strong>
+                    Isso aumenta a temperatura interna da geladeira e favorece a proliferação de bactérias nos outros alimentos. Sempre espere esfriar.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">6</div>
+                <div>
+                    <p><strong>Não variar o cardápio entre as semanas</strong>
+                    Repetir o mesmo cardápio por meses gera tédio e aumenta as chances de furar a dieta. Troque pelo menos uma proteína ou acompanhamento a cada semana.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">7</div>
+                <div>
+                    <p><strong>Esquecer dos temperos</strong>
+                    Comida fitness não precisa ser sem gosto. Páprica defumada, cúrcuma, alho, limão e ervas frescas fazem toda a diferença sem adicionar calorias.</p>
+                </div>
+            </div>
+
+            <div class="error-item">
+                <div class="error-icon">8</div>
+                <div>
+                    <p><strong>Não ter um plano de contingência</strong>
+                    Imprevistos acontecem. Tenha sempre uma opção rápida na manga, como ovos, atum enlatado ou um shake de proteína, para os dias em que o meal prep acabar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="fade-up">
+            <h2>Conclusão</h2>
+
+            <p>O meal prep é a ferramenta mais prática que existe para quem quer manter uma alimentação fitness consistente ao longo da semana. Com apenas 2 horas no domingo, você elimina a desculpa do "não tenho tempo", economiza dinheiro e garante que cada refeição esteja alinhada com seus objetivos.</p>
+
+            <p>Comece simples. Na primeira semana, prepare apenas os almoços. Na segunda, adicione os jantares. Na terceira, você já vai ter pegado o ritmo e vai fazer tudo no piloto automático. O segredo não é a perfeição, é a consistência.</p>
+
+            <p>Se você quer um cardápio pronto com 50 receitas fitness já calculadas em calorias e macros, ideal para meal prep, confira nosso <a href="https://pay.kiwify.com.br/A1O9KKX">ebook de receitas fitness</a>. E para montar sua estratégia alimentar completa, leia nossos guias sobre <a href="deficit-calorico.html">déficit calórico</a> e <a href="dieta-rica-proteina.html">dieta rica em proteína</a>.</p>
+
+            <p>Bom preparo e bons treinos!</p>
+        </section>
+
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 O Novo Apetite</p>
+    </footer>
+
+    <!-- FADE-UP ANIMATION -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-up').forEach(function(el) {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+ATENÇÃO - Copie os conteúdos abaixo e crie 3 arquivos .bat dentro da pasta o-novo-apetite-git-ready_1
+
+====== ARQUIVO 1: 1-EXECUTE-PRIMEIRO.bat ======
+
+@echo off
+chcp 65001 >nul 2>&1
+color 0B
+title Deploy O Novo Apetite - Step 1: Git Setup
+cls
+
+echo.
+echo ================================================
+echo    STEP 1: SETUP GIT INICIAL
+echo ================================================
+echo.
+
+cd /d "%~dp0"
+
+if not exist ".git" (
+    echo [*] Inicializando repositório Git...
+    git init
+    git config user.name "Mario Deploy"
+    git config user.email "mariolucas0501@gmail.com"
+    git add .
+    git commit -m "Initial commit - O Novo Apetite Vercel ready"
+    echo [OK] Repositório Git criado!
+) else (
+    echo [OK] Repositório Git já existe
+)
+
+echo.
+echo ================================================
+echo    STEP 2: CRIAR REPOSITÓRIO NO GITHUB
+echo ================================================
+echo.
+echo [ATENÇÃO] Você precisa:
+echo.
+echo 1. Abrir: https://github.com/new
+echo 2. Preencher assim:
+echo    - Repository name: o-novo-apetite
+echo    - Description: Novo Apetite - Ebook Receitas Fitness
+echo    - Public (deixar público)
+echo 3. Clique em "Create repository"
+echo.
+echo [AGUARDANDO] Você criou o repositório? (s/n)
+choice /c sn /t 60 /d s
+
+if errorlevel 2 exit /b 0
+if errorlevel 1 goto :continue
+
+:continue
+echo.
+echo [OK] Continuando...
+pause
+call "2-PUSH-PARA-GITHUB.bat"
+
+
+====== ARQUIVO 2: 2-PUSH-PARA-GITHUB.bat ======
+
+@echo off
+chcp 65001 >nul 2>&1
+color 0B
+title Deploy O Novo Apetite - Step 2: Push para GitHub
+cls
+
+echo.
+echo ================================================
+echo    STEP 2: FAZER PUSH PARA GITHUB
+echo ================================================
+echo.
+
+cd /d "%~dp0"
+
+echo [*] Pedindo dados do repositório GitHub...
+echo.
+set /p github_url="Cole a URL do seu repositório (https://github.com/usuario/o-novo-apetite.git): "
+
+if "%github_url%"=="" (
+    echo [ERRO] URL não pode estar vazia!
+    pause
+    exit /b 1
+)
+
+echo.
+echo [*] Adicionando remote origin...
+git remote add origin %github_url%
+
+echo [*] Fazendo push para main branch...
+git branch -M main
+git push -u origin main
+
+if errorlevel 1 (
+    echo.
+    echo [ERRO] Falha no push! Pode ser:
+    echo - URL incorreta
+    echo - Sem acesso ao repositório
+    echo - Credenciais inválidas
+    echo.
+    pause
+    exit /b 1
+)
+
+echo.
+echo [OK] Push realizado com sucesso!
+echo.
+echo ================================================
+echo    STEP 3: CONECTAR AO VERCEL
+echo ================================================
+echo.
+echo [ATENÇÃO] Agora você precisa:
+echo.
+echo 1. Abrir: https://vercel.com/dashboard
+echo 2. Clicar em "Add New" > "Project"
+echo 3. Clicar em "Import Git Repository"
+echo 4. Procurar por "o-novo-apetite"
+echo 5. Framework: "Other" (ou deixar em branco)
+echo 6. Build Command: echo "Static site"
+echo 7. Output Directory: . (ponto)
+echo 8. Clique em "Deploy"
+echo.
+echo [AGUARDANDO] Você fez o deploy no Vercel? (s/n)
+choice /c sn /t 120 /d s
+
+if errorlevel 2 exit /b 0
+if errorlevel 1 (
+    echo.
+    echo [OK] Finalizando...
+    call "3-TESTAR-SITE.bat"
+)
+
+
+====== ARQUIVO 3: 3-TESTAR-SITE.bat ======
+
+@echo off
+chcp 65001 >nul 2>&1
+color 0B
+title Deploy O Novo Apetite - Step 3: Testar Site
+cls
+
+echo.
+echo ================================================
+echo    STEP 3: TESTAR SITE
+echo ================================================
+echo.
+
+echo [*] Abrindo o Chrome para testar...
+echo.
+start chrome https://o-novo-apetite.vercel.app
+
+echo.
+echo [INFO] O site pode levar 30-60 segundos para ficar pronto.
+echo.
+echo Testando:
+echo 1. Homepage (raiz)
+echo 2. Landing Page Ebook: /50receitasfitness/
+echo 3. Blog: /blog/
+echo.
+echo [*] Se vir o design completo com fundo escuro, menu, etc = SUCESSO!
+echo [*] Se vir código base64 = ainda está processando, aguarde mais 30s
+echo.
+pause
+
+echo.
+echo ================================================
+echo    FINALIZADO!
+echo ================================================
+echo.
+echo Se o site renderizou corretamente:
+echo.
+echo Próximos passos:
+echo 1. Conectar domínio onovoapetite.com.br (Vercel > Domains)
+echo 2. Configurar DNS no Registro.br
+echo 3. Preparar campanhas Meta Ads
+echo 4. Iniciar tráfego pago
+echo.
+pause
+
+
+========================================
+COMO CRIAR:
+1. Abra Notepad
+2. Cole o conteúdo do arquivo 1
+3. Salve como "1-EXECUTE-PRIMEIRO.bat" (tipo: All Files)
+4. Repita para os arquivos 2 e 3
+5. Coloque os 3 .bat dentro da pasta o-novo-apetite-git-ready_1
+6. Clique 2x no primeiro .bat para executar
+
+========================================

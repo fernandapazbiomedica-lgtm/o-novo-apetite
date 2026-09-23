@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Apetite | Alimentação Saudável, Receitas Fitness e Emagrecimento</title>
+    <meta name="description" content="O Novo Apetite: seu portal de alimentação saudável. Receitas fitness práticas, guias de emagrecimento e ebooks para transformar sua relação com a comida.">
+    <meta name="keywords" content="receitas fitness, alimentação saudável, emagrecimento, ebook fitness, dieta, nutrição, receitas saudáveis">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://onovoapetite.com.br/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="O Novo Apetite | Alimentação Saudável & Receitas Fitness">
+    <meta property="og:description" content="Seu portal de alimentação saudável. Receitas fitness, guias e ebooks para emagrecer com sabor.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://onovoapetite.com.br/">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "O Novo Apetite",
+        "url": "https://onovoapetite.com.br",
+        "description": "Portal de alimentação saudável com receitas fitness, guias de emagrecimento e ebooks.",
+        "inLanguage": "pt-BR",
+        "publisher": {
+            "@type": "Organization",
+            "name": "O Novo Apetite"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --red: #E53935;
+            --red-dark: #C62828;
+            --red-light: #FF5252;
+            --bg: #0a0a0a;
+            --bg-card: #141414;
+            --bg-card-hover: #1c1c1c;
+            --border: rgba(255,255,255,0.08);
+            --text: #f5f5f5;
+            --text-secondary: rgba(255,255,255,0.6);
+            --text-muted: rgba(255,255,255,0.35);
+            --container: 1100px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 20px; }
+
+        /* ========= NAV ========= */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10,10,10,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.3s;
+        }
+        .nav-inner {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+        .nav-logo span { color: var(--red); }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta {
+            background: var(--red);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .nav-cta:hover { background: var(--red-dark); transform: translateY(-1px); }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+        .nav-toggle span {
+            width: 22px;
+            height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-toggle { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 64px;
+                left: 0;
+                right: 0;
+                background: rgba(10,10,10,0.97);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                gap: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s;
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-links.open { max-height: 320px; }
+            .nav-links li { border-bottom: 1px solid var(--border); }
+            .nav-links a {
+                display: block;
+                padding: 16px 24px;
+                font-size: 1rem;
+            }
+            .nav-links .nav-cta {
+                margin: 16px 24px;
+                text-align: center;
+                display: block;
+                border-radius: 8px;
+            }
+        }
+
+        /* ========= HERO ========= */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(229,57,53,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 80%, rgba(229,57,53,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 720px; }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(229,57,53,0.12);
+            color: var(--red);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 24px;
+            border: 1px solid rgba(229,57,53,0.2);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        .hero h1 em {
+            color: var(--red);
+            font-style: italic;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--red);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: all 0.25s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(229,57,53,0.3); }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            padding: 14px 32px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.25s;
+            cursor: pointer;
+        }
+        .btn-secondary:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            animation: float 2s ease-in-out infinite;
+        }
+        .scroll-indicator svg { width: 20px; height: 20px; stroke: var(--text-muted); }
+        @keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+        /* ========= SECTIONS ========= */
+        section { padding: 80px 0; }
+        .section-tag {
+            display: inline-block;
+            background: rgba(229,57,53,0.1);
+            color: var(--red);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            line-height: 1.7;
+        }
+        .section-subtitle.centered { margin: 0 auto; }
+
+        /* ========= PRODUCTS ========= */
+        .products { background: var(--bg); }
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+            max-width: 900px;
+            margin: 48px auto 0;
+        }
+        .product-card:hover { transform: translateY(-4px); border-color: rgba(229,57,53,0.3); }
+        .product-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .product-image {
+            background: linear-gradient(135deg, #1a0a0a, #0a0a0a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            min-height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+        .product-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(229,57,53,0.1) 0%, transparent 70%);
+        }
+        .product-mockup {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 240px;
+        }
+        .product-mockup-placeholder {
+            width: 200px;
+            height: 260px;
+            background: linear-gradient(145deg, var(--red), var(--red-dark));
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(229,57,53,0.15);
+            margin: 0 auto;
+        }
+        .product-mockup-placeholder .book-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .product-mockup-placeholder .book-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #fff;
+        }
+        .product-mockup-placeholder .book-sub {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.7);
+            margin-top: 8px;
+        }
+        .product-info {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .product-badge {
+            display: inline-block;
+            background: rgba(229,57,53,0.12);
+            color: var(--red);
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+            width: fit-content;
+        }
+        .product-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        .product-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .product-price {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .price-current {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--red);
+        }
+        .price-original {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-decoration: line-through;
+        }
+        .product-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--red);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            transition: all 0.25s;
+            width: fit-content;
+        }
+        .product-cta:hover { background: var(--red-dark); transform: translateY(-2px); }
+        .product-cta svg { width: 16px; height: 16px; }
+
+        @media (max-width: 768px) {
+            .product-inner { grid-template-columns: 1fr; }
+            .product-image { min-height: 240px; padding: 32px; }
+            .product-info { padding: 28px; }
+        }
+
+        /* ========= BLOG PREVIEW ========= */
+        .blog-section { background: var(--bg); }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: transform 0.3s, border-color 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card:hover { transform: translateY(-4px); border-color: rgba(229,57,53,0.25); }
+        .blog-card-tag {
+            display: inline-block;
+            background: rgba(229,57,53,0.1);
+            color: var(--red);
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+            width: fit-content;
+        }
+        .blog-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .blog-card p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            flex: 1;
+            margin-bottom: 16px;
+        }
+        .blog-card-link {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--red);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s;
+        }
+        .blog-card-link:hover { gap: 10px; }
+        .blog-card-link svg { width: 14px; height: 14px; }
+        .blog-more {
+            text-align: center;
+            margin-top: 36px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+        }
+
+        /* ========= ABOUT ========= */
+        .about { background: var(--bg); }
+        .about-content {
+            max-width: 700px;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+        .about-content p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+        .value-item {
+            text-align: center;
+            padding: 32px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+        .value-icon {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .value-item h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .value-item p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .about-values { grid-template-columns: 1fr; }
+        }
+
+        /* ========= NEWSLETTER ========= */
+        .newsletter {
+            background: linear-gradient(135deg, rgba(229,57,53,0.08), rgba(229,57,53,0.02));
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .newsletter-inner {
+            text-align: center;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .newsletter-inner p {
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            font-size: 0.95rem;
+        }
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 440px;
+            margin: 0 auto;
+        }
+        .newsletter-form input {
+            flex: 1;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: var(--text);
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .newsletter-form input::placeholder { color: var(--text-muted); }
+        .newsletter-form input:focus { border-color: var(--red); }
+        .newsletter-form button {
+            background: var(--red);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 24px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: inherit;
+            white-space: nowrap;
+        }
+        .newsletter-form button:hover { background: var(--red-dark); }
+        @media (max-width: 480px) {
+            .newsletter-form { flex-direction: column; }
+        }
+
+        /* ========= FOOTER ========= */
+        .footer {
+            padding: 48px 0 32px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+        .footer-brand .nav-logo { margin-bottom: 10px; }
+        .footer-brand p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-width: 280px;
+            line-height: 1.6;
+        }
+        .footer-links h4 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 8px; }
+        .footer-links a {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--text); }
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">O Novo <span>Apetite</span></a>
+            <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="/50receitasfitness/" class="nav-cta">Ver Ebook</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Alimentação inteligente</div>
+            <h1>Coma menos,<br>aproveite <em>melhor</em></h1>
+            <p>Receitas fitness práticas, guias de emagrecimento e conteúdo para quem quer transformar sua relação com a comida sem abrir mão do sabor.</p>
+            <div class="hero-buttons">
+                <a href="/50receitasfitness/" class="btn-primary">Conhecer o Ebook</a>
+                <a href="/blog/" class="btn-secondary">Ler o Blog</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Explore</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+        </div>
+    </section>
+
+    <!-- PRODUTOS -->
+    <section class="products" id="produtos">
+        <div class="container text-center">
+            <div class="section-tag">Nossos Produtos</div>
+            <h2 class="section-title">Transforme sua alimentação</h2>
+            <p class="section-subtitle centered">Ebooks e guias pensados para quem busca praticidade, saúde e sabor no dia a dia.</p>
+        </div>
+        <div class="container">
+            <a href="/50receitasfitness/" class="product-card">
+                <div class="product-inner">
+                    <div class="product-image">
+                        <div class="product-mockup">
+                            <div class="product-mockup-placeholder">
+                                <div class="book-icon">🍽️</div>
+                                <div class="book-title">50 Receitas Fitness</div>
+                                <div class="book-sub">O Novo Apetite</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-badge">Ebook</div>
+                        <h3>50 Receitas Fitness para Comer Menos e Aproveitar Melhor</h3>
+                        <p>Receitas práticas, nutritivas e saborosas para o dia a dia. Café da manhã, almoço, jantar, lanches e sobremesas fit. Tudo com calorias e macros calculados.</p>
+                        <div class="product-price">
+                            <span class="price-current">R$ 19,90</span>
+                            <span class="price-original">R$ 97,00</span>
+                        </div>
+                        <div class="product-cta">
+                            Saiba Mais
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog-section" id="blog">
+        <div class="container">
+            <div class="text-center">
+                <div class="section-tag">Blog</div>
+                <h2 class="section-title">Conteúdo gratuito para você</h2>
+                <p class="section-subtitle centered">Artigos práticos sobre emagrecimento, nutrição e receitas fitness.</p>
+            </div>
+            <div class="blog-grid">
+                <a href="/blog/deficit-calorico.html" class="blog-card">
+                    <div class="blog-card-tag">Emagrecimento</div>
+                    <h3>Déficit Calórico: Como Calcular e Emagrecer Sem Passar Fome</h3>
+                    <p>Entenda a ciência por trás do emagrecimento e aprenda a calcular seu déficit calórico ideal.</p>
+                    <span class="blog-card-link">
+                        Ler artigo
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                    </span>
+                </a>
+                <a href="/blog/cafe-da-manha-fitness.html" class="blog-card">
+                    <div class="blog-card-tag">Receitas</div>
+                    <h3>Café da Manhã Fitness: 10 Receitas Rápidas Para Emagrecer</h3>
+                    <p>10 opções de café da manhã saudável prontas em até 10 minutos para começar o dia certo.</p>
+                    <span class="blog-card-link">
+                        Ler artigo
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                    </span>
+                </a>
+                <a href="/blog/receitas-fitness-faceis.html" class="blog-card">
+                    <div class="blog-card-tag">Receitas</div>
+                    <h3>7 Receitas Fitness Fáceis Prontas em 15 Minutos</h3>
+                    <p>Refeições completas e nutritivas para quem não tem tempo de cozinhar.</p>
+                    <span class="blog-card-link">
+                        Ler artigo
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                    </span>
+                </a>
+            </div>
+            <div class="blog-more">
+                <a href="/blog/" class="btn-secondary">Ver todos os artigos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+        <div class="container text-center">
+            <div class="section-tag">Sobre</div>
+            <h2 class="section-title">O que é O Novo Apetite?</h2>
+            <div class="about-content">
+                <p>O Novo Apetite nasceu da ideia de que alimentação saudável não precisa ser complicada, sem graça ou cara. Nosso conteúdo é feito para pessoas reais, com rotinas corridas, que querem cuidar da saúde sem virar escravas da cozinha.</p>
+            </div>
+            <div class="about-values">
+                <div class="value-item">
+                    <div class="value-icon">⚡</div>
+                    <h4>Praticidade</h4>
+                    <p>Receitas rápidas para quem tem pouco tempo no dia a dia.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">🎯</div>
+                    <h4>Resultados</h4>
+                    <p>Calorias e macros calculados para facilitar sua dieta.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">😋</div>
+                    <h4>Sabor</h4>
+                    <p>Porque comida saudável também precisa ser gostosa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="section-tag">Newsletter</div>
+                <h2 class="section-title">Receba receitas grátis</h2>
+                <p>Toda semana uma receita fitness nova direto no seu email. Sem spam, só conteúdo que importa.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Enviado!'; this.querySelector('input').value='';">
+                    <input type="email" placeholder="Seu melhor email" required>
+                    <button type="submit">Inscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <div class="nav-logo">O Novo <span style="color: var(--red);">Apetite</span></div>
+                    <p>Alimentação saudável, prática e saborosa para o dia a dia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Conteúdo</h4>
+                    <ul>
+                        <li><a href="/blog/deficit-calorico.html">Déficit Calórico</a></li>
+                        <li><a href="/blog/cafe-da-manha-fitness.html">Café da Manhã Fitness</a></li>
+                        <li><a href="/blog/meal-prep-fitness.html">Meal Prep</a></li>
+                        <li><a href="/blog/dieta-rica-proteina.html">Dieta Rica em Proteína</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Produto</h4>
+                    <ul>
+                        <li><a href="/50receitasfitness/">50 Receitas Fitness</a></li>
+                        <li><a href="https://pay.kiwify.com.br/A1O9KKX">Comprar Ebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 O Novo Apetite. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
