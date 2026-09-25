@@ -559,58 +559,49 @@
             .about-values { grid-template-columns: 1fr; }
         }
 
-        /* ========= NEWSLETTER ========= */
+        /* ========= NEWSLETTER / ISCA ========= */
         .newsletter {
             background: linear-gradient(135deg, rgba(229,57,53,0.08), rgba(229,57,53,0.02));
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
         }
-        .newsletter-inner {
-            text-align: center;
-            max-width: 520px;
-            margin: 0 auto;
+        .nl-banner { display: block; max-width: 1000px; margin: 0 auto 32px; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.45); transition: transform 0.3s; }
+        .nl-banner:hover { transform: translateY(-3px); }
+        .nl-banner img { display: block; width: 100%; height: auto; }
+        .nl-card { max-width: 560px; margin: 0 auto; text-align: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; padding: 36px 32px; }
+        .nl-lead { color: var(--text-secondary); margin-bottom: 24px; font-size: 0.95rem; line-height: 1.7; }
+        .nl-form { display: flex; flex-direction: column; gap: 14px; text-align: left; position: relative; }
+        .nl-field { display: flex; flex-direction: column; gap: 6px; }
+        .nl-field span { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); }
+        .nl-field input {
+            width: 100%; box-sizing: border-box;
+            background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 10px;
+            padding: 14px 16px; font-size: 1rem; color: var(--text); font-family: inherit; outline: none; transition: border-color 0.2s;
         }
-        .newsletter-inner p {
-            color: var(--text-secondary);
-            margin-bottom: 28px;
-            font-size: 0.95rem;
+        .nl-field input::placeholder { color: var(--text-muted); }
+        .nl-field input:focus { border-color: var(--red); }
+        .nl-field input.nl-invalid { border-color: #f87171; }
+        .nl-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+        .nl-btn {
+            display: inline-flex; align-items: center; justify-content: center; width: 100%;
+            background: var(--red); color: #fff; border: none; border-radius: 12px; padding: 17px 20px;
+            font-size: 1rem; font-weight: 800; letter-spacing: 0.03em; cursor: pointer; font-family: inherit;
+            text-decoration: none; box-shadow: 0 6px 28px rgba(229,57,53,0.4); transition: transform 0.2s, background 0.2s;
         }
-        .newsletter-form {
-            display: flex;
-            gap: 12px;
-            max-width: 440px;
-            margin: 0 auto;
-        }
-        .newsletter-form input {
-            flex: 1;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 12px 16px;
-            font-size: 0.9rem;
-            color: var(--text);
-            font-family: inherit;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        .newsletter-form input::placeholder { color: var(--text-muted); }
-        .newsletter-form input:focus { border-color: var(--red); }
-        .newsletter-form button {
-            background: var(--red);
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            padding: 12px 24px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s;
-            font-family: inherit;
-            white-space: nowrap;
-        }
-        .newsletter-form button:hover { background: var(--red-dark); }
-        @media (max-width: 480px) {
-            .newsletter-form { flex-direction: column; }
+        .nl-btn:hover { background: var(--red-dark); transform: translateY(-2px); }
+        .nl-btn:disabled { opacity: 0.7; cursor: wait; transform: none; }
+        .nl-btn-green { background: linear-gradient(180deg, #2ED573, #16A34A); box-shadow: 0 6px 28px rgba(34,197,94,0.4); }
+        .nl-btn-green:hover { background: linear-gradient(180deg, #3BE07F, #15803D); }
+        .nl-consent { font-size: 0.75rem; color: var(--text-muted); text-align: center; line-height: 1.5; margin: 0; }
+        .nl-msg { font-size: 0.9rem; text-align: center; min-height: 1.3em; margin: 0; color: #f87171; }
+        .nl-success p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
+        .nl-success strong { color: var(--text); }
+        .nl-success-badge { display: inline-block; background: var(--red); color: #fff; font-weight: 800; padding: 8px 18px; border-radius: 999px; margin-bottom: 16px; transform: rotate(-3deg); }
+        .nl-tip { font-size: 0.85rem; }
+        .nl-upsell { margin-top: 22px; padding-top: 22px; border-top: 1px solid var(--border); }
+        @media (max-width: 600px) {
+            .nl-banner { margin-bottom: 24px; border-radius: 12px; }
+            .nl-card { padding: 28px 20px; }
         }
 
         /* ========= FOOTER ========= */
@@ -800,19 +791,49 @@
         </div>
     </section>
 
-    <!-- NEWSLETTER -->
-    <section class="newsletter">
+    <!-- NEWSLETTER / ISCA: RECEITAS DE SOBREMESA -->
+    <section class="newsletter" id="receitas-gratis">
         <div class="container">
-            <div class="newsletter-inner">
-                <div class="section-tag">Newsletter</div>
-                <h2 class="section-title">Receba receitas grátis</h2>
-                <p>Toda semana uma receita fitness nova direto no seu email. Sem spam, só conteúdo que importa.</p>
-                <form class="newsletter-form" id="newsletterForm" novalidate>
-                    <input type="email" name="email" placeholder="Seu melhor email" required autocomplete="email" inputmode="email" aria-label="Seu melhor email">
-                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
-                    <button type="submit">Inscrever</button>
-                </form>
-                <p id="newsletterMsg" role="status" aria-live="polite" style="margin-top:14px;font-size:0.95rem;min-height:1.4em;"></p>
+            <a href="#nlForm" class="nl-banner" id="nlBanner" aria-label="Cadastre-se e ganhe receitas de sobremesas">
+                <img src="newsletter-banner.jpg" alt="Você ganhou! Receitas de sobremesas para ter mais prazer na sua rotina" width="1774" height="887" loading="lazy">
+            </a>
+
+            <div class="nl-card" id="nlCard">
+                <div class="nl-form-wrap" id="nlFormWrap">
+                    <span class="section-tag">Presente grátis</span>
+                    <h2 class="section-title">Ganhe 3 receitas de <span style="color: var(--red);">sobremesa fit</span></h2>
+                    <p class="nl-lead">Pudim de chia com morango, brigadeiro de colher e sorvete de banana com morango. Preencha abaixo e receba as receitas completas no seu e-mail agora.</p>
+
+                    <form class="nl-form" id="nlForm" novalidate>
+                        <label class="nl-field">
+                            <span>Seu nome</span>
+                            <input type="text" name="nome" placeholder="Como podemos te chamar?" autocomplete="given-name" required maxlength="80">
+                        </label>
+                        <label class="nl-field">
+                            <span>Seu melhor e-mail</span>
+                            <input type="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" inputmode="email" required maxlength="254">
+                        </label>
+                        <label class="nl-field">
+                            <span>WhatsApp com DDD</span>
+                            <input type="tel" name="telefone" placeholder="(11) 91234-5678" autocomplete="tel-national" inputmode="numeric" required maxlength="16">
+                        </label>
+                        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="nl-hp">
+                        <button type="submit" class="nl-btn">QUERO MINHAS RECEITAS GRÁTIS</button>
+                        <p class="nl-consent">Ao se cadastrar, você concorda em receber conteúdos do O Novo Apetite por e-mail e WhatsApp. Sem spam, e você pode sair quando quiser.</p>
+                        <p class="nl-msg" id="nlMsg" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="nl-success" id="nlSuccess" hidden>
+                    <div class="nl-success-badge">Você ganhou!</div>
+                    <h2 class="section-title">Parabéns, <span id="nlNome" style="color: var(--red);">você</span>!</h2>
+                    <p>Suas <strong>3 receitas de sobremesa</strong> já estão a caminho do e-mail <strong id="nlEmail"></strong>.</p>
+                    <p class="nl-tip">Não chegou em alguns minutos? Dá uma olhada nas abas <strong>Promoções</strong> ou <strong>Spam</strong> e marque como "não é spam" pra não perder as próximas.</p>
+                    <div class="nl-upsell">
+                        <p>Gostou das sobremesas? São <strong>50 receitas fitness</strong> completas no ebook O Novo Apetite.</p>
+                        <a href="/50receitasfitness/?utm_source=site&amp;utm_medium=newsletter&amp;utm_campaign=sobremesas" class="nl-btn nl-btn-green">CONHECER O EBOOK</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -859,37 +880,70 @@
 
     <script>
     (function () {
-        var LEADS_URL = 'https://script.google.com/macros/s/AKfycbzo1WXWOLFerUiqZylaAdzeMTlrk7HHkFWeWioRKUTBFfkYnnMvcIlLCb0kKgKfFOsl/exec';
-        var form = document.getElementById('newsletterForm');
-        var msg = document.getElementById('newsletterMsg');
+        var LEADS_URL = 'https://script.google.com/macros/s/AKfycbxSpqHP9kBX13u5VtqE2LXBOSfDAq3vB_KeAwlOgtdYoDcLXuWD15SadVjjcmFz_G43/exec';
+        var form = document.getElementById('nlForm');
         if (!form) return;
-        var input = form.querySelector('input[name="email"]');
-        var btn = form.querySelector('button');
-        function aviso(texto, ok) { msg.textContent = texto; msg.style.color = ok ? '#4ade80' : '#f87171'; }
+        var msg = document.getElementById('nlMsg');
+        var btn = form.querySelector('.nl-btn');
+        var fNome = form.elements.nome, fEmail = form.elements.email, fTel = form.elements.telefone;
+        var inicio = Date.now();
+
+        // Banner leva ao formulario e foca no nome
+        var banner = document.getElementById('nlBanner');
+        if (banner) banner.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('nlCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function () { fNome.focus({ preventScroll: true }); }, 450);
+        });
+
+        // Mascara (11) 91234-5678
+        function mascara(v) {
+            var d = v.replace(/\D/g, '').replace(/^55(?=\d{10,11}$)/, '').slice(0, 11);
+            if (d.length <= 2) return d.length ? '(' + d : '';
+            if (d.length <= 6) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+            if (d.length <= 10) return '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+            return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+        }
+        fTel.addEventListener('input', function () { fTel.value = mascara(fTel.value); });
+
+        function erro(campo, texto) {
+            [fNome, fEmail, fTel].forEach(function (c) { c.classList.remove('nl-invalid'); });
+            if (campo) { campo.classList.add('nl-invalid'); campo.focus(); }
+            msg.textContent = texto || '';
+        }
+
         form.addEventListener('submit', function (e) {
             e.preventDefault();
-            var email = (input.value || '').trim();
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { aviso('Digite um e-mail válido.', false); input.focus(); return; }
-            btn.disabled = true; btn.textContent = 'Enviando...';
+            var nome = fNome.value.trim().replace(/\s+/g, ' ');
+            var email = fEmail.value.trim();
+            var digitos = fTel.value.replace(/\D/g, '');
+            if (nome.length < 2) return erro(fNome, 'Digite seu nome.');
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return erro(fEmail, 'Digite um e-mail válido.');
+            if (!/^[1-9]{2}9?\d{8}$/.test(digitos)) return erro(fTel, 'Digite seu WhatsApp com DDD. Ex: (11) 91234-5678');
+            if (navigator.onLine === false) return erro(null, 'Parece que você está sem internet. Tente de novo em instantes.');
+            erro(null, '');
+            btn.disabled = true; btn.textContent = 'ENVIANDO...';
+
             var dados = new URLSearchParams({
+                nome: nome,
                 email: email,
-                website: form.querySelector('input[name="website"]').value,
+                telefone: '+55' + digitos,
+                website: form.elements.website.value,
+                t: String(Date.now() - inicio),
                 page: location.pathname,
                 utm: location.search.slice(1),
                 ua: navigator.userAgent
             });
-            if (navigator.onLine === false) {
-                aviso('Parece que você está sem internet. Tente de novo em instantes.', false);
-                btn.disabled = false; btn.textContent = 'Inscrever';
-                return;
-            }
-            // O Google demora para responder, mas grava na hora: envia em segundo plano (keepalive)
+            // O Google demora para responder, mas grava e envia na hora: envio em segundo plano
             try { fetch(LEADS_URL, { method: 'POST', mode: 'no-cors', body: dados, keepalive: true }).catch(function () {}); } catch (err) {}
+
             setTimeout(function () {
-                aviso('Pronto! Você está na lista. A próxima receita chega no seu e-mail.', true);
-                btn.textContent = 'Inscrito!';
-                input.value = '';
-                if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', { content_name: 'Newsletter' }); }
+                document.getElementById('nlNome').textContent = nome.split(' ')[0];
+                document.getElementById('nlEmail').textContent = email;
+                document.getElementById('nlFormWrap').hidden = true;
+                document.getElementById('nlSuccess').hidden = false;
+                document.getElementById('nlCard').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', { content_name: 'Receitas de sobremesa' }); }
             }, 700);
         });
     })();
