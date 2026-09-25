@@ -807,10 +807,12 @@
                 <div class="section-tag">Newsletter</div>
                 <h2 class="section-title">Receba receitas grátis</h2>
                 <p>Toda semana uma receita fitness nova direto no seu email. Sem spam, só conteúdo que importa.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Enviado!'; this.querySelector('input').value='';">
-                    <input type="email" placeholder="Seu melhor email" required>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <input type="email" name="email" placeholder="Seu melhor email" required autocomplete="email" inputmode="email" aria-label="Seu melhor email">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
                     <button type="submit">Inscrever</button>
                 </form>
+                <p id="newsletterMsg" role="status" aria-live="polite" style="margin-top:14px;font-size:0.95rem;min-height:1.4em;"></p>
             </div>
         </div>
     </section>
@@ -854,5 +856,41 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    (function () {
+        var LEADS_URL = 'https://script.google.com/macros/s/AKfycbzo1WXWOLFerUiqZylaAdzeMTlrk7HHkFWeWioRKUTBFfkYnnMvcIlLCb0kKgKfFOsl/exec';
+        var form = document.getElementById('newsletterForm');
+        var msg = document.getElementById('newsletterMsg');
+        if (!form) return;
+        var input = form.querySelector('input[name="email"]');
+        var btn = form.querySelector('button');
+        function aviso(texto, ok) { msg.textContent = texto; msg.style.color = ok ? '#4ade80' : '#f87171'; }
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = (input.value || '').trim();
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { aviso('Digite um e-mail válido.', false); input.focus(); return; }
+            btn.disabled = true; btn.textContent = 'Enviando...';
+            var dados = new URLSearchParams({
+                email: email,
+                website: form.querySelector('input[name="website"]').value,
+                page: location.pathname,
+                utm: location.search.slice(1),
+                ua: navigator.userAgent
+            });
+            fetch(LEADS_URL, { method: 'POST', mode: 'no-cors', body: dados })
+                .then(function () {
+                    aviso('Pronto! Você está na lista. A próxima receita chega no seu e-mail.', true);
+                    btn.textContent = 'Inscrito!';
+                    input.value = '';
+                    if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', { content_name: 'Newsletter' }); }
+                })
+                .catch(function () {
+                    aviso('Não conseguimos enviar agora. Tente de novo em instantes.', false);
+                    btn.disabled = false; btn.textContent = 'Inscrever';
+                });
+        });
+    })();
+    </script>
 </body>
 </html>
