@@ -878,17 +878,19 @@
                 utm: location.search.slice(1),
                 ua: navigator.userAgent
             });
-            fetch(LEADS_URL, { method: 'POST', mode: 'no-cors', body: dados })
-                .then(function () {
-                    aviso('Pronto! Você está na lista. A próxima receita chega no seu e-mail.', true);
-                    btn.textContent = 'Inscrito!';
-                    input.value = '';
-                    if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', { content_name: 'Newsletter' }); }
-                })
-                .catch(function () {
-                    aviso('Não conseguimos enviar agora. Tente de novo em instantes.', false);
-                    btn.disabled = false; btn.textContent = 'Inscrever';
-                });
+            if (navigator.onLine === false) {
+                aviso('Parece que você está sem internet. Tente de novo em instantes.', false);
+                btn.disabled = false; btn.textContent = 'Inscrever';
+                return;
+            }
+            // O Google demora para responder, mas grava na hora: envia em segundo plano (keepalive)
+            try { fetch(LEADS_URL, { method: 'POST', mode: 'no-cors', body: dados, keepalive: true }).catch(function () {}); } catch (err) {}
+            setTimeout(function () {
+                aviso('Pronto! Você está na lista. A próxima receita chega no seu e-mail.', true);
+                btn.textContent = 'Inscrito!';
+                input.value = '';
+                if (typeof window.fbq === 'function') { window.fbq('track', 'Lead', { content_name: 'Newsletter' }); }
+            }, 700);
         });
     })();
     </script>
