@@ -1723,6 +1723,21 @@
             .cta-button.cta-button-green { font-size: 1.05rem; padding: 20px 16px; }
             .offer-includes li .value { white-space: nowrap; }
         }
+
+        /* ===== TODOS OS BOTOES DE CHECKOUT EM VERDE ===== */
+        a.cta-button[href*="pay.kiwify"] {
+            background: linear-gradient(180deg, #2ED573 0%, #16A34A 100%);
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+            box-shadow: 0 6px 30px rgba(34, 197, 94, 0.45), inset 0 -3px 0 rgba(0,0,0,0.18);
+        }
+        a.cta-button[href*="pay.kiwify"]:hover {
+            background: linear-gradient(180deg, #3BE07F 0%, #15803D 100%);
+            box-shadow: 0 8px 40px rgba(34, 197, 94, 0.6), inset 0 -3px 0 rgba(0,0,0,0.18);
+        }
+        a.cta-button.cta-button-pulse[href*="pay.kiwify"] {
+            animation: cta-glow-green 2s ease-in-out infinite;
+        }
     </style>
 </head>
 <body>
