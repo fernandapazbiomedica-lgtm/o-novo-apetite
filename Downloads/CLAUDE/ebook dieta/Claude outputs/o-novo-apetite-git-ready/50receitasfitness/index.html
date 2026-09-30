@@ -1743,27 +1743,34 @@
 
         /* ===== DEPOIMENTOS ===== */
         .depo-section { padding: var(--section-padding); background: linear-gradient(180deg, #0a0a0a 0%, #111 100%); }
-        .depo-grid { columns: 3 300px; column-gap: 20px; margin-top: 8px; }
-        .depo-card {
-            break-inside: avoid; display: inline-block; width: 100%; margin: 0 0 20px;
-            background: var(--dark-card); border: 1px solid var(--dark-border); border-radius: 16px; padding: 22px 22px 18px; text-align: left;
-        }
-        .depo-stars { color: #FFC107; letter-spacing: 2px; font-size: 1rem; margin-bottom: 10px; }
-        .depo-texto { color: #d8d8d8; font-size: 0.95rem; line-height: 1.65; margin: 0 0 16px; }
-        .depo-foto { margin: 0 0 16px; }
-        .depo-foto img { display: block; width: 100%; height: auto; border-radius: 12px; }
-        .depo-foto figcaption { font-size: 0.75rem; color: var(--text-muted); margin-top: 6px; }
-        .depo-autor { display: flex; align-items: center; gap: 12px; }
+        .depo-grid { columns: 3 320px; column-gap: 28px; margin-top: 8px; }
+        .depo-card { break-inside: avoid; display: flex; align-items: flex-end; gap: 10px; width: 100%; margin: 0 0 22px; text-align: left; }
         .depo-avatar {
-            width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%; overflow: hidden;
+            width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; overflow: hidden;
             display: inline-flex; align-items: center; justify-content: center;
-            background: linear-gradient(135deg, var(--red), #8e1b18); color: #fff; font-weight: 800; font-size: 1.1rem;
+            background: linear-gradient(135deg, var(--red), #8e1b18); color: #fff; font-weight: 800; font-size: 1rem;
+            box-shadow: 0 0 0 2px #111, 0 0 0 3px rgba(255,255,255,.12);
         }
         .depo-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .depo-nome { font-weight: 700; color: #fff; font-size: 0.95rem; }
+        .depo-balao {
+            position: relative; flex: 1; min-width: 0; background: #F4F1EC; color: #1b1b1b;
+            border-radius: 18px 18px 18px 4px; padding: 12px 16px 14px;
+            box-shadow: 0 6px 18px rgba(0,0,0,.35);
+        }
+        .depo-balao::before {
+            content: ""; position: absolute; left: -7px; bottom: 0; width: 14px; height: 14px;
+            background: #F4F1EC; clip-path: polygon(100% 0, 100% 100%, 0 100%);
+        }
+        .depo-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+        .depo-nome { font-weight: 800; color: var(--red); font-size: 0.9rem; }
+        .depo-stars { color: #F5A623; letter-spacing: 1px; font-size: 0.8rem; white-space: nowrap; }
+        .depo-texto { color: #222; font-size: 0.95rem; line-height: 1.55; margin: 0; }
+        .depo-foto { margin: 12px 0 0; }
+        .depo-foto img { display: block; width: 100%; height: auto; border-radius: 12px; }
+        .depo-foto figcaption { font-size: 0.72rem; color: #777; margin-top: 6px; }
         @media (max-width: 768px) {
-            .depo-grid { columns: auto; display: flex; align-items: flex-start; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 4px 20px 14px; scroll-padding: 0 20px; -webkit-overflow-scrolling: touch; }
-            .depo-card { flex: 0 0 82vw; scroll-snap-align: center; margin: 0; }
+            .depo-grid { columns: auto; display: flex; align-items: flex-start; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 8px 20px 16px 24px; scroll-padding: 0 20px; -webkit-overflow-scrolling: touch; }
+            .depo-card { flex: 0 0 84vw; scroll-snap-align: center; margin: 0; }
         }
     </style>
 </head>
@@ -2241,75 +2248,68 @@
         <div class="container">
             <div class="depo-grid">
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Eu já tava cansado de frango com batata doce kkk. Treino e quero comer melhor, mas também quero comer coisa gostosa. Fiz a panqueca de banana e ficou muito boa. Já fiz umas 3 vezes.”</p>
-                    <figure class="depo-foto" data-foto="depo-rogerio-prato.jpg" hidden>
-                        <img alt="Panqueca de banana · foto de Rogério" loading="lazy">
-                        <figcaption>Panqueca de banana · foto de Rogério</figcaption>
-                    </figure>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-rogerio-perfil.jpg" aria-hidden="true">R</span>
-                        <span class="depo-nome">Rogério, 45</span>
+                    <span class="depo-avatar" data-foto="depo-rogerio-perfil.jpg" aria-hidden="true">R</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Rogério, 45</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Eu já tava cansado de frango com batata doce kkk. Treino e quero comer melhor, mas também quero comer coisa gostosa. Fiz a panqueca de banana e ficou muito boa. Já fiz umas 3 vezes.</p>
+                        <figure class="depo-foto" data-foto="depo-rogerio-prato.jpg" hidden>
+                            <img alt="Panqueca de banana · foto de Rogério" loading="lazy">
+                            <figcaption>Panqueca de banana · foto de Rogério</figcaption>
+                        </figure>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Pra mim o melhor foi conseguir me organizar. Trabalho o dia inteiro e antes chegava em casa com fome e pedia qualquer coisa. Agora deixo algumas coisas prontas e levo marmita. Facilitou MUITO.”</p>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-camila-perfil.jpg" aria-hidden="true">C</span>
-                        <span class="depo-nome">Camila, 28</span>
+                    <span class="depo-avatar" data-foto="depo-camila-perfil.jpg" aria-hidden="true">C</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Camila, 28</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Pra mim o melhor foi conseguir me organizar. Trabalho o dia inteiro e antes chegava em casa com fome e pedia qualquer coisa. Agora deixo algumas coisas prontas e levo marmita. Facilitou MUITO.</p>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Gostei bastante porque não achei difícil. Eu não sou de fazer receita complicada não. Fiz o de chia com iogurte e deu certo de primeira. Os ingredientes também são coisas que a gente encontra no mercado normalmente.”</p>
-                    <figure class="depo-foto" data-foto="depo-jacielma-prato.jpg" hidden>
-                        <img alt="Pudim de chia com iogurte · foto de Jacielma" loading="lazy">
-                        <figcaption>Pudim de chia com iogurte · foto de Jacielma</figcaption>
-                    </figure>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-jacielma-perfil.jpg" aria-hidden="true">J</span>
-                        <span class="depo-nome">Jacielma, 60</span>
+                    <span class="depo-avatar" data-foto="depo-jacielma-perfil.jpg" aria-hidden="true">J</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Jacielma, 60</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Gostei bastante porque não achei difícil. Eu não sou de fazer receita complicada não. Fiz o de chia com iogurte e deu certo de primeira. Os ingredientes também são coisas que a gente encontra no mercado normalmente.</p>
+                        <figure class="depo-foto" data-foto="depo-jacielma-prato.jpg" hidden>
+                            <img alt="Pudim de chia com iogurte · foto de Jacielma" loading="lazy">
+                            <figcaption>Pudim de chia com iogurte · foto de Jacielma</figcaption>
+                        </figure>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Aqui em casa todo mundo comeu! Eu fiz a carne desfiada com purê e nem falei que era uma receita ‘fitness’. Meu marido gostou, meus filhos também. Isso pra mim foi o melhor.”</p>
-                    <figure class="depo-foto" data-foto="depo-renata-prato.jpg" hidden>
-                        <img alt="Carne desfiada com purê · foto de Renata" loading="lazy">
-                        <figcaption>Carne desfiada com purê · foto de Renata</figcaption>
-                    </figure>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-renata-perfil.jpg" aria-hidden="true">R</span>
-                        <span class="depo-nome">Renata, 44</span>
+                    <span class="depo-avatar" data-foto="depo-renata-perfil.jpg" aria-hidden="true">R</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Renata, 44</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Aqui em casa todo mundo comeu! Eu fiz a carne desfiada com purê e nem falei que era uma receita ‘fitness’. Meu marido gostou, meus filhos também. Isso pra mim foi o melhor.</p>
+                        <figure class="depo-foto" data-foto="depo-renata-prato.jpg" hidden>
+                            <img alt="Carne desfiada com purê · foto de Renata" loading="lazy">
+                            <figcaption>Carne desfiada com purê · foto de Renata</figcaption>
+                        </figure>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Eu sou a pessoa que sempre fala ‘só um docinho’ e quando vê já acabou com a sobremesa inteira. Então ter opções de doce que eu consigo fazer em casa ajudou bastante. O brigadeiro proteico foi o primeiro que fiz e gostei muito, esse não tinha gosto de terra haha.”</p>
-                    <figure class="depo-foto" data-foto="depo-juliana-prato.jpg" hidden>
-                        <img alt="Brigadeiro proteico · foto de Juliana" loading="lazy">
-                        <figcaption>Brigadeiro proteico · foto de Juliana</figcaption>
-                    </figure>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-juliana-perfil.jpg" aria-hidden="true">J</span>
-                        <span class="depo-nome">Juliana, 37</span>
+                    <span class="depo-avatar" data-foto="depo-juliana-perfil.jpg" aria-hidden="true">J</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Juliana, 37</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Eu sou a pessoa que sempre fala ‘só um docinho’ e quando vê já acabou com a sobremesa inteira. Então ter opções de doce que eu consigo fazer em casa ajudou bastante. O brigadeiro proteico foi o primeiro que fiz e gostei muito, esse não tinha gosto de terra haha.</p>
+                        <figure class="depo-foto" data-foto="depo-juliana-prato.jpg" hidden>
+                            <img alt="Brigadeiro proteico · foto de Juliana" loading="lazy">
+                            <figcaption>Brigadeiro proteico · foto de Juliana</figcaption>
+                        </figure>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“O que mais mudou foi parar de ficar pensando ‘o que eu vou comer hoje?’. Parece bobo, mas eu perdia muito tempo com isso. Agora tenho várias opções pra escolher. o marido agradece kkkkkkk”</p>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-patricia-perfil.jpg" aria-hidden="true">P</span>
-                        <span class="depo-nome">Patrícia, 39</span>
+                    <span class="depo-avatar" data-foto="depo-patricia-perfil.jpg" aria-hidden="true">P</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Patrícia, 39</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">O que mais mudou foi parar de ficar pensando ‘o que eu vou comer hoje?’. Parece bobo, mas eu perdia muito tempo com isso. Agora tenho várias opções pra escolher. o marido agradece kkkkkkk</p>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <div class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</div>
-                    <p class="depo-texto">“Gostei porque não tem aquela coisa de receita fitness que você olha os ingredientes e pensa: de onde eu vou tirar isso? É coisa normal e o resultado fica bom.”</p>
-                    <div class="depo-autor">
-                        <span class="depo-avatar" data-foto="depo-daniel-perfil.jpg" aria-hidden="true">D</span>
-                        <span class="depo-nome">Daniel, 34</span>
+                    <span class="depo-avatar" data-foto="depo-daniel-perfil.jpg" aria-hidden="true">D</span>
+                    <div class="depo-balao">
+                        <div class="depo-topo"><span class="depo-nome">Daniel, 34</span><span class="depo-stars" aria-label="5 de 5 estrelas">★★★★★</span></div>
+                        <p class="depo-texto">Gostei porque não tem aquela coisa de receita fitness que você olha os ingredientes e pensa: de onde eu vou tirar isso? É coisa normal e o resultado fica bom.</p>
                     </div>
                 </article>
             </div>
