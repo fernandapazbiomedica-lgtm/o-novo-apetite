@@ -756,7 +756,23 @@
             .h2-strip span { font-size: 1.1rem; }
         }
         @media (prefers-reduced-motion: reduce) { .h2-strip-track, .h2-float { animation: none; } .h2-reveal { opacity: 1; transform: none; } }
+    
+        /* ===== SELETOR DE IDIOMA ===== */
+        .lsw{display:inline-flex;align-items:center;gap:2px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:3px;font:700 12px/1 'Inter',system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap}
+        .lsw svg{width:15px;height:15px;margin:0 3px 0 7px;color:rgba(255,255,255,.6);flex-shrink:0}
+        .lsw a{display:inline-block;padding:6px 10px;border-radius:999px;color:rgba(255,255,255,.7)!important;text-decoration:none;transition:background .2s,color .2s}
+        .lsw a:hover{color:#fff!important}
+        .lsw a.on{background:#E53935;color:#fff!important}
+        .nav-inner .nav-links{margin-left:auto}
+        .nav-inner .lsw{margin-left:20px}
+        @media (max-width:768px){.nav-inner .lsw{order:1;margin-left:auto;margin-right:12px}.nav-inner .nav-toggle{order:2}}
+        .announcement-bar{position:relative}
+        .announcement-bar .lsw{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.25);font-size:11px}
+        .announcement-bar .lsw a{padding:5px 8px}
+        @media (max-width:600px){.announcement-bar{padding-right:96px!important;text-align:left}.announcement-bar .lsw svg{display:none}}
     </style>
+    <link rel="alternate" hreflang="pt-BR" href="https://onovoapetite.com.br/">
+    <link rel="alternate" hreflang="es" href="https://onovoapetite.com.br/es/">
 </head>
 <body>
     <!-- NAV -->
@@ -772,6 +788,7 @@
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="/50receitasfitness/" class="nav-cta">Ver Ebook</a></li>
             </ul>
+            <div class="lsw" role="navigation" aria-label="Idioma / Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="/" hreflang="pt-BR" lang="pt-BR" class="on" aria-current="true" onclick="try{localStorage.setItem('lang','pt')}catch(e){}">PT</a><a href="/es/" hreflang="es" lang="es" onclick="try{localStorage.setItem('lang','es')}catch(e){}">ES</a></div>
         </div>
     </nav>
 
