@@ -3,13 +3,30 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0e0e0e;color:#f2f2f2;font-family:'Montserrat','Segoe UI',Arial,sans-serif;line-height:1.6}
 .wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
-.bar{background:#e11d2a;color:#fff;text-align:center;font-weight:800;font-size:13px;letter-spacing:1px;padding:10px 12px}
-.steps{display:flex;justify-content:center;gap:8px;margin:18px 0 26px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;flex-wrap:wrap}
-.steps span{padding:5px 10px;border-radius:999px;background:#1a1a1a;border:1px solid #2a2a2a}
-.steps .on{background:#e11d2a;border-color:#e11d2a;color:#fff}
-h1{font-size:30px;line-height:1.2;font-weight:800;text-align:center;margin-bottom:14px}
-h1 em{font-style:normal;color:#e11d2a}
-.sub{text-align:center;color:#cfcfcf;font-size:17px;max-width:600px;margin:0 auto 26px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(225,29,42,.55)}70%{box-shadow:0 0 0 12px rgba(225,29,42,0)}}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.bar{background:linear-gradient(90deg,#b3121f,#e11d2a,#ff3b47,#e11d2a,#b3121f);background-size:200% 100%;animation:shine 4s linear infinite;color:#fff;text-align:center;font-weight:800;font-size:14px;letter-spacing:1px;padding:12px 12px 10px;line-height:1.3}
+.bar small{display:block;font-size:11px;font-weight:700;letter-spacing:2px;opacity:.9;margin-top:3px}
+.bar .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-right:8px;animation:pulse 1s infinite;vertical-align:1px}
+.hero{position:relative;margin:-28px -18px 22px;padding:26px 18px 28px;background:radial-gradient(90% 70% at 50% 0%,rgba(225,29,42,.30) 0%,rgba(225,29,42,.06) 55%,transparent 100%)}
+.prog{display:flex;align-items:center;justify-content:center;gap:0;margin:0 auto 22px;max-width:420px}
+.prog .s{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#7a7a7a;width:96px;text-align:center}
+.prog .c{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;background:#1a1a1a;border:2px solid #333;color:#7a7a7a}
+.prog .done{color:#4ade80}.prog .done .c{background:#22c55e;border-color:#22c55e;color:#06210f}
+.prog .on{color:#fff}.prog .on .c{background:#e11d2a;border-color:#e11d2a;color:#fff;animation:glow 1.6s infinite}
+.prog .ln{flex:1;height:3px;background:#333;margin-bottom:22px;border-radius:2px}.prog .ln.g{background:linear-gradient(90deg,#22c55e,#e11d2a)}
+.kick{display:table;margin:0 auto 14px;background:rgba(225,29,42,.15);border:1px solid #e11d2a;color:#ffb3b8;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+h1{font-size:34px;line-height:1.15;font-weight:800;text-align:center;margin-bottom:18px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:#fff;background:linear-gradient(180deg,transparent 58%,rgba(225,29,42,.85) 58%);padding:0 4px;border-radius:2px}
+.vsl{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);background:#000;margin:0 auto 18px}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vsl .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:radial-gradient(70% 70% at 50% 45%,#2a0f12 0%,#0b0b0b 100%)}
+.vsl .play{width:78px;height:78px;border-radius:50%;background:#e11d2a;display:flex;align-items:center;justify-content:center;animation:glow 1.6s infinite}
+.vsl .play:after{content:"";border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.vsl .ph b{font-size:15px;color:#fff;letter-spacing:.5px}.vsl .ph span{font-size:12px;color:#9a9a9a}
+.sub{text-align:center;color:#dcdcdc;font-size:17px;max-width:600px;margin:0 auto 18px}
+.go{display:table;margin:0 auto;background:#22c55e;color:#06210f;font-weight:800;font-size:15px;letter-spacing:.5px;padding:13px 22px;border-radius:12px;text-decoration:none;box-shadow:0 8px 20px rgba(34,197,94,.3)}
 .card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:24px 22px;margin-bottom:16px}
 .card.red{border-color:#e11d2a}
 .k{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e11d2a;font-weight:800;margin-bottom:6px}
@@ -47,9 +64,8 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 .hl b{color:#fff}
 .disc{text-align:center;font-size:11px;color:#6f6f6f;margin-top:28px}
 </style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');var nvaEid;try{nvaEid=localStorage.getItem('nva_eid');if(!nvaEid){nvaEid='v'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('nva_eid',nvaEid);}}catch(e){}fbq('init','1771961234064362',nvaEid?{external_id:nvaEid}:{});fbq('track','PageView');</script></head><body>
-<div class="bar">ÚLTIMA OPORTUNIDAD EN ESTA PÁGINA</div><div class="wrap"><div class="steps"><span class="">Compra confirmada</span><span class="on">Oferta única</span><span class="">Acceso</span></div>
-<h1>Está bien. ¿Qué tal solo <em>lo esencial</em>?</h1><p class="sub">Los mismos 5 planes de 30 días y las listas de compras de cada semana, por un precio menor.</p><div class="card red"><div class="k">Plan 30 Días Esencial</div><div class="t">Lo que recibes</div><ul class="check"><li><b>Los 5 planes de 30 días</b> (1200 a 2500 kcal)</li><li><b>Listas de compras</b> de cada semana</li><li>Armados con las recetas de tu ebook, con las porciones ya calculadas</li></ul><div class="kcal"><div>1200<small>kcal</small></div><div>1500<small>kcal</small></div><div>1700<small>kcal</small></div><div>2000<small>kcal</small></div><div>2500<small>kcal</small></div></div></div>
-<div class="price"><div class="tag">ÚLTIMA OPORTUNIDAD</div><div class="old">Plan completo: <s>US$ 13,40</s></div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>9,40</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Menos de <b>US$ 0,32 por día</b></div><div class="vs">Los mismos 5 planes de 30 días, por menos.</div><div class="note">Pago único · valor aproximado en dólares; el cargo final puede variar un poco según el tipo de cambio de tu tarjeta</div></div>
+<div class="bar"><span class="dot"></span>ÚLTIMA OPORTUNIDAD EN ESTA PÁGINA<small>NO CIERRES ESTA PÁGINA</small></div><div class="wrap"><div class="hero"><div class="prog"><div class="s done"><div class="c">✓</div>Compra confirmada</div><div class="ln g"></div><div class="s on"><div class="c">2</div>Oferta única</div><div class="ln"></div><div class="s "><div class="c">3</div>Acceso</div></div><div class="kick">Precio especial para ti</div><h1>Está bien. ¿Qué tal solo <em>lo esencial</em>?</h1><p class="sub">Los mismos 5 planes de 30 días y las listas de compras de cada semana, por un precio menor.</p><a class="go" href="#oferta">Ver la oferta ↓</a></div><div class="card red"><div class="k">Plan 30 Días Esencial</div><div class="t">Lo que recibes</div><ul class="check"><li><b>Los 5 planes de 30 días</b> (1200 a 2500 kcal)</li><li><b>Listas de compras</b> de cada semana</li><li>Armados con las recetas de tu ebook, con las porciones ya calculadas</li></ul><div class="kcal"><div>1200<small>kcal</small></div><div>1500<small>kcal</small></div><div>1700<small>kcal</small></div><div>2000<small>kcal</small></div><div>2500<small>kcal</small></div></div></div>
+<div class="price" id="oferta"><div class="tag">ÚLTIMA OPORTUNIDAD</div><div class="old">Plan completo: <s>US$ 13,40</s></div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>9,40</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Menos de <b>US$ 0,32 por día</b></div><div class="vs">Los mismos 5 planes de 30 días, por menos.</div><div class="note">Pago único · valor aproximado en dólares; el cargo final puede variar un poco según el tipo de cambio de tu tarjeta</div></div>
 <div class="kiwify"><div style="text-align:center"><button id="kiwify-upsell-trigger-Xsi0lGE" style="background:#22c55e;color:#fff;border:0;border-radius:12px;padding:20px 28px;font-size:20px;font-weight:800;font-family:Montserrat,Arial,sans-serif;cursor:pointer;width:100%;max-width:520px;box-shadow:0 8px 20px rgba(34,197,94,.35)">SÍ, QUIERO EL PLAN ESENCIAL</button><div id="kiwify-upsell-cancel-trigger" style="margin-top:1rem;cursor:pointer;font-size:15px;text-decoration:underline;font-family:Montserrat,Arial,sans-serif;color:#9a9a9a;">No, gracias.</div></div><script> let nextUpsellURL = "https://www.onovoapetite.com.br/50recetas/gracias.html"; let nextDownsellURL = "https://www.onovoapetite.com.br/50recetas/gracias.html";</script><script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script></div>
 
 <div class="guar"><b>7 días de garantía</b><p>Si no es para ti, pides el reembolso y te devolvemos el 100%, sin preguntas.</p></div>
