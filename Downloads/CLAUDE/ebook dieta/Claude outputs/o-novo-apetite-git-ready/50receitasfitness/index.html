@@ -1772,13 +1772,30 @@
             .depo-grid { columns: auto; display: flex; align-items: flex-start; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding: 8px 20px 16px 24px; scroll-padding: 0 20px; -webkit-overflow-scrolling: touch; }
             .depo-card { flex: 0 0 84vw; scroll-snap-align: center; margin: 0; }
         }
+    
+        /* ===== SELETOR DE IDIOMA ===== */
+        .lsw{display:inline-flex;align-items:center;gap:2px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:3px;font:700 12px/1 'Inter',system-ui,sans-serif;letter-spacing:.05em;white-space:nowrap}
+        .lsw svg{width:15px;height:15px;margin:0 3px 0 7px;color:rgba(255,255,255,.6);flex-shrink:0}
+        .lsw a{display:inline-block;padding:6px 10px;border-radius:999px;color:rgba(255,255,255,.7)!important;text-decoration:none;transition:background .2s,color .2s}
+        .lsw a:hover{color:#fff!important}
+        .lsw a.on{background:#E53935;color:#fff!important}
+        .nav-inner .nav-links{margin-left:auto}
+        .nav-inner .lsw{margin-left:20px}
+        @media (max-width:768px){.nav-inner .lsw{order:1;margin-left:auto;margin-right:12px}.nav-inner .nav-toggle{order:2}}
+        .announcement-bar{position:relative}
+        .announcement-bar .lsw{position:absolute;right:10px;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.25);font-size:11px}
+        .announcement-bar .lsw a{padding:5px 8px}
+        @media (max-width:600px){.announcement-bar{padding-right:96px!important;text-align:left}.announcement-bar .lsw svg{display:none}}
     </style>
+    <link rel="alternate" hreflang="pt-BR" href="https://onovoapetite.com.br/50receitasfitness/">
+    <link rel="alternate" hreflang="es" href="https://onovoapetite.com.br/50recetas/">
 </head>
 <body>
 
     <!-- ============ ANNOUNCEMENT BAR ============ -->
     <div class="announcement-bar">
         <span>&#x1F525; OFERTA ESPECIAL POR TEMPO LIMITADO &#x1F525;</span>
+            <div class="lsw" role="navigation" aria-label="Idioma / Idioma"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><a href="/50receitasfitness/" hreflang="pt-BR" lang="pt-BR" class="on" aria-current="true" onclick="try{localStorage.setItem('lang','pt')}catch(e){}">PT</a><a href="/50recetas/" hreflang="es" lang="es" onclick="try{localStorage.setItem('lang','es')}catch(e){}">ES</a></div>
     </div>
 
     <!-- ============ HERO ============ -->
