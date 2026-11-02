@@ -853,6 +853,118 @@
 
         .tdee-head{text-align:center;max-width:760px;margin:0 auto}
         .tdee-head .section-tag,.tdee-head .section-title,.tdee-head .section-subtitle{text-align:center;margin-left:auto;margin-right:auto}
+
+        /* ===== Bonus v2 ===== */
+        .bx-section{position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 45% at 50% 18%,rgba(229,57,53,.16),transparent 70%),#0b0b0b}
+        .bx-section .section-subtitle{max-width:620px;margin:14px auto 0;text-align:center}
+        .bx-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:980px;margin:48px auto 0}
+        .bx-card{position:relative;border-radius:22px;overflow:hidden;background:linear-gradient(180deg,#171717,#101010);border:1px solid #2a2a2a;transition:transform .3s,box-shadow .3s,border-color .3s;text-align:center}
+        .bx-card:hover{transform:translateY(-6px);border-color:rgba(229,57,53,.55);box-shadow:0 24px 50px -22px rgba(229,57,53,.55)}
+        .bx-visual{position:relative;height:250px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 60%,rgba(229,57,53,.32),rgba(229,57,53,0) 62%),linear-gradient(180deg,#1d1414,#121212);border-bottom:1px solid #262626}
+        .bx-page{width:140px;height:198px;object-fit:cover;border-radius:6px;transform:rotate(-6deg);box-shadow:0 18px 40px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.06);position:relative;z-index:2;transition:transform .35s}
+        .bx-card:hover img.bx-page{transform:rotate(-2deg) scale(1.04)}
+        .bx-page-back{position:absolute;z-index:1;background:#2a1d1b;transform:translate(26px,6px) rotate(6deg);box-shadow:0 12px 30px rgba(0,0,0,.5)}
+        .bx-num{position:absolute;top:16px;left:16px;z-index:3;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;padding:6px 12px;border-radius:30px;box-shadow:0 6px 16px -4px rgba(229,57,53,.8)}
+        .bx-body{padding:26px 26px 28px}
+        .bx-body h3{font-size:1.3rem;font-weight:800;margin-bottom:10px;color:#fff}
+        .bx-body p{font-size:.95rem;line-height:1.6;color:var(--text-secondary);max-width:380px;margin:0 auto}
+        .bx-price{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px}
+        .bx-old{color:var(--text-muted);font-weight:700;text-decoration:line-through;font-size:1rem}
+        .bx-free{background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:.95rem;padding:8px 18px;border-radius:30px;box-shadow:0 8px 22px -6px rgba(34,197,94,.7)}
+        .bx-total{max-width:980px;margin:28px auto 0;display:flex;align-items:center;justify-content:center;gap:20px;padding:26px 28px;border-radius:20px;border:2px solid var(--red);background:linear-gradient(135deg,rgba(229,57,53,.18),rgba(229,57,53,.04));box-shadow:0 0 40px -10px rgba(229,57,53,.6)}
+        .bx-total-icon{flex:none;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(145deg,var(--red-light),var(--red-dark));box-shadow:0 0 0 7px rgba(229,57,53,.12)}
+        .bx-total-icon svg{width:30px;height:30px}
+        .bx-total-text{display:flex;flex-direction:column;align-items:flex-start}
+        .bx-total-label{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--text-secondary);font-weight:700}
+        .bx-total-value{font-size:1.6rem;font-weight:900;color:#fff}
+        .bx-total-value s{color:var(--text-muted);font-size:1.2rem;margin-right:6px}
+        .bx-total-value b{color:#22c55e}
+        @media (max-width:760px){.bx-grid{grid-template-columns:1fr;max-width:440px}.bx-visual{height:220px}.bx-total{flex-direction:column;text-align:center}.bx-total-text{align-items:center}.bx-total-value{font-size:1.35rem}}
+
+        /* ===== Oferta v2 ===== */
+        .plans{grid-template-columns:.9fr 1.2fr;gap:28px;align-items:center}
+        .plan-basic{opacity:.88;transform:scale(.96)}
+        .plan-full{border:2px solid var(--red)!important;background:radial-gradient(ellipse 90% 40% at 50% 0%,rgba(229,57,53,.22),transparent 70%),linear-gradient(180deg,#191313,#111)!important;box-shadow:0 0 0 6px rgba(229,57,53,.08),0 30px 80px -30px rgba(229,57,53,.75);padding:56px 36px 36px!important;overflow:visible!important}
+        .plan-full::before{display:none}
+        .pf-ribbon{position:absolute;top:-17px;left:50%;transform:translateX(-50%);white-space:nowrap;background:linear-gradient(135deg,var(--red-light),var(--red-dark));color:#fff;font-size:.78rem;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;padding:9px 22px;border-radius:40px;box-shadow:0 10px 26px -6px rgba(229,57,53,.9)}
+        .pf-title{font-size:2rem;font-weight:900;line-height:1.1;color:#fff}
+        .pf-sub{color:var(--text-secondary);margin-top:6px;font-size:1rem}
+        .pf-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:18px 0 6px}
+        .pf-chips span{font-size:.78rem;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#fff;background:rgba(229,57,53,.16);border:1px solid rgba(229,57,53,.5);padding:6px 12px;border-radius:30px}
+        .pf-thumbs{display:flex;justify-content:center;margin:20px 0 4px}
+        .pf-thumbs img{width:64px;height:90px;object-fit:cover;border-radius:4px;margin:0 -8px;box-shadow:0 10px 24px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08)}
+        .pf-thumbs img:nth-child(1){transform:rotate(-10deg) translateY(6px)}
+        .pf-thumbs img:nth-child(2){transform:rotate(-3deg)}
+        .pf-thumbs img:nth-child(3){transform:rotate(3deg);z-index:1}
+        .pf-thumbs img:nth-child(4){transform:rotate(10deg) translateY(6px)}
+        .pf-price{margin:26px 0 20px;padding:22px 16px;border-radius:16px;background:rgba(0,0,0,.35);border:1px dashed rgba(229,57,53,.45)}
+        .pf-total{color:var(--text-secondary);font-size:1rem;font-weight:600}
+        .pf-total s{color:var(--text-muted);margin-left:4px}
+        .pf-now{display:flex;align-items:flex-start;justify-content:center;gap:6px;line-height:1;margin:6px 0 10px}
+        .pf-cur{font-size:1.6rem;font-weight:900;color:#fff;margin-top:12px}
+        .pf-amt{font-size:5.6rem;font-weight:900;letter-spacing:-3px;background:linear-gradient(180deg,#fff 0%,#ffb3ad 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 24px rgba(229,57,53,.55))}
+        .pf-save{display:inline-block;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:800;font-size:.85rem;letter-spacing:.4px;padding:8px 16px;border-radius:30px;box-shadow:0 8px 20px -6px rgba(34,197,94,.7)}
+        .pf-cta{font-size:1.15rem!important;padding:22px 18px!important;gap:10px}
+        .pf-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:16px}
+        .pf-trust span{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:#e6e6e6}
+        .pf-trust svg{width:17px;height:17px;color:#22c55e}
+        .pf-note{color:var(--text-muted);font-size:.8rem;margin-top:10px}
+        @media (max-width:860px){.plans{grid-template-columns:1fr}.plan-basic{transform:none}.plan-full{margin-top:14px!important}.pf-amt{font-size:4.6rem}.plan-full{padding:50px 22px 30px!important}}
+
+        /* ===== Garantía v2 ===== */
+        .gt-section{background:radial-gradient(ellipse 60% 50% at 50% 30%,rgba(229,57,53,.14),transparent 70%),#0b0b0b}
+        .gt-box{max-width:980px;margin:0 auto;text-align:center;padding:56px 32px 40px;border-radius:26px;border:1px solid rgba(229,57,53,.35);background:linear-gradient(180deg,#161111,#0f0f0f);box-shadow:0 30px 80px -40px rgba(229,57,53,.6)}
+        .gt-box .section-title,.gt-box .section-tag{text-align:center;margin-left:auto;margin-right:auto}
+        .gt-seal{position:relative;width:200px;height:200px;margin:0 auto 6px;filter:drop-shadow(0 14px 30px rgba(229,57,53,.55));animation:gtSpin 0s}
+        .gt-seal-svg{width:100%;height:100%}
+        .gt-seal-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;line-height:1}
+        .gt-n{font-size:4.2rem;font-weight:900}
+        .gt-d{font-size:.95rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-top:-2px}
+        .gt-g{font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;margin-top:6px;opacity:.9;text-align:center}
+        .gt-lead{max-width:640px;margin:16px auto 0;color:var(--text-secondary);font-size:1.05rem;line-height:1.65}
+        .gt-lead b{color:#fff}
+        .gt-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+        .gt-step{background:#141414;border:1px solid #262626;border-radius:18px;padding:26px 20px}
+        .gt-ic{width:56px;height:56px;margin:0 auto 12px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(145deg,var(--red-light),var(--red-dark));box-shadow:0 0 0 6px rgba(229,57,53,.1)}
+        .gt-ic svg{width:26px;height:26px}
+        .gt-k{display:block;font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--red-light);margin-bottom:6px}
+        .gt-step h4{font-size:1.08rem;font-weight:800;color:#fff;margin-bottom:6px}
+        .gt-step p{font-size:.9rem;color:var(--text-secondary);line-height:1.55}
+        .gt-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px}
+        .gt-pills span{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;font-weight:700;color:#fff;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.45);padding:8px 14px;border-radius:30px}
+        .gt-pills svg{width:16px;height:16px;color:#22c55e}
+        @media (max-width:760px){.gt-steps{grid-template-columns:1fr}.gt-box{padding:44px 18px 30px}.gt-seal{width:140px;height:140px}.gt-n{font-size:3rem}}
+
+        /* ===== Final CTA v2 ===== */
+        .fc-section{position:relative;overflow:hidden;padding:100px 20px!important;background:#0a0a0a!important;text-align:left}
+        .fc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.22;filter:saturate(1.1)}
+        .fc-section::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.6),rgba(10,10,10,.92) 55%),radial-gradient(ellipse 50% 60% at 25% 50%,rgba(229,57,53,.25),transparent 70%);pointer-events:none}
+        .fc-section .container{position:relative;z-index:1}
+        .fc-wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;max-width:1060px;margin:0 auto}
+        .fc-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:420px}
+        .fc-glow{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(229,57,53,.45),transparent 65%);filter:blur(10px)}
+        .fc-book{position:relative;z-index:2;width:100%;max-width:400px;border-radius:14px;box-shadow:0 40px 80px -20px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.08);transform:perspective(900px) rotateY(10deg) rotate(-2deg)}
+        .fc-fan{position:absolute;z-index:3;bottom:-6px;right:-8px;display:flex}
+        .fc-fan img{width:62px;height:88px;object-fit:cover;border-radius:4px;margin-left:-22px;box-shadow:0 12px 26px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.1)}
+        .fc-fan img:nth-child(1){transform:rotate(-12deg)}.fc-fan img:nth-child(2){transform:rotate(-4deg)}.fc-fan img:nth-child(3){transform:rotate(4deg)}.fc-fan img:nth-child(4){transform:rotate(12deg)}
+        .fc-tag{position:absolute;z-index:4;top:14px;left:6px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:900;font-size:.85rem;letter-spacing:1px;text-transform:uppercase;padding:9px 16px;border-radius:30px;box-shadow:0 10px 24px -6px rgba(34,197,94,.75);transform:rotate(-6deg)}
+        .fc-copy,.fc-copy h2,.fc-copy p{text-align:left!important}
+        .fc-copy .section-tag{margin:0 0 14px}
+        .fc-copy h2{font-size:clamp(2rem,4vw,2.9rem);font-weight:900;line-height:1.08;color:#fff;margin-bottom:14px}
+        .fc-lead{color:var(--text-secondary);font-size:1.05rem;line-height:1.6;max-width:480px;margin:0 0 20px!important}
+        .fc-list{list-style:none;margin:0 0 24px;padding:0;display:grid;gap:10px}
+        .fc-list li{display:flex;align-items:center;gap:12px;color:#eee;font-size:1rem;font-weight:500}
+        .fc-ck{flex:none;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(34,197,94,.15);color:#22c55e;border:1px solid rgba(34,197,94,.5)}
+        .fc-ck svg{width:14px;height:14px}
+        .fc-price{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+        .fc-old{color:var(--text-muted);font-weight:600}
+        .fc-new{font-size:3rem;font-weight:900;line-height:1;background:linear-gradient(180deg,#fff,#ffb3ad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 18px rgba(229,57,53,.5))}
+        .fc-once{color:var(--text-secondary);font-size:.9rem;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+        .fc-cta{width:100%;max-width:460px;font-size:1.12rem!important;padding:22px 18px!important;gap:10px;justify-content:center}
+        .fc-trust{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:16px}
+        .fc-trust span{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;font-weight:600;color:#ddd}
+        .fc-trust svg{width:17px;height:17px;color:#22c55e}
+        @media (max-width:860px){.fc-section{padding:70px 18px!important;text-align:center}.fc-section::after{background:linear-gradient(180deg,rgba(10,10,10,.75),rgba(10,10,10,.95))}.fc-wrap{grid-template-columns:1fr;gap:34px}.fc-visual{min-height:0}.fc-book{max-width:320px;transform:none}.fc-glow{width:300px;height:300px}.fc-copy .section-tag{margin:0 auto 14px}.fc-lead{margin:0 auto 20px!important}.fc-list{justify-items:start;max-width:360px;margin:0 auto 24px;text-align:left}.fc-price,.fc-trust{justify-content:center}.fc-cta{margin:0 auto}.fc-copy,.fc-copy h2,.fc-copy p{text-align:center!important}.fc-tag{top:auto;bottom:-10px;left:10px}}
         /* ===== Pain section v2 ===== */
         .pain-section{position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(229,57,53,.10),transparent 70%),linear-gradient(180deg,#0a0a0a 0%,#0f0f0f 100%)}
         .pain-section .section-subtitle{max-width:620px;margin-left:auto;margin-right:auto}
@@ -2388,39 +2500,70 @@
     </div>
 
     <!-- ============ BONUS ============ -->
-    <section class="bonus-section">
+    <section class="bonus-section bx-section">
         <div class="container text-center">
             <span class="section-tag">Bonos exclusivos</span>
             <h2 class="section-title">
-                Además te llevas <span class="text-red">3 bonos</span> para hacerlo todo más fácil.
+                Además te llevas<br><span class="text-red">4 bonos gratis.</span>
             </h2>
+            <p class="section-subtitle">Juntos valen US$ 33. Hoy van incluidos sin costo con tu Edición Completa.</p>
         </div>
-
         <div class="container">
-            <div class="bonus-cards fade-up">
-                <div class="bonus-card">
-                    <div class="bonus-number">#1</div>
-                    <div class="bonus-info">
+            <div class="bx-grid fade-up">
+                <div class="bx-card">
+                    <div class="bx-visual">
+                        <span class="bx-num">Bono #1</span>
+                        <div class="bx-page bx-page-back"></div>
+                        <img class="bx-page" src="img/bono-1.jpg" alt="Vista del bono Menú de 7 Días" loading="lazy">
+                    </div>
+                    <div class="bx-body">
                         <h3>Menú de 7 Días</h3>
                         <p>Una semana completa de desayunos, almuerzos, cenas y colaciones armada con las recetas del libro. Solo tienes que seguirlo.</p>
-                        <span class="bonus-value">Valor: US$ 12 → Gratis</span>
+                        <div class="bx-price"><span class="bx-old">Valor US$ 12</span><span class="bx-free">Gratis</span></div>
                     </div>
                 </div>
-                <div class="bonus-card">
-                    <div class="bonus-number">#2</div>
-                    <div class="bonus-info">
+                <div class="bx-card">
+                    <div class="bx-visual">
+                        <span class="bx-num">Bono #2</span>
+                        <div class="bx-page bx-page-back"></div>
+                        <img class="bx-page" src="img/bono-2.jpg" alt="Vista del bono Índice por Proteína" loading="lazy">
+                    </div>
+                    <div class="bx-body">
                         <h3>Índice por Proteína</h3>
                         <p>Encuentra en segundos qué cocinar según lo que tienes en el refrigerador: pollo, huevo, pescado, res, lácteos, legumbres y más.</p>
-                        <span class="bonus-value">Valor: US$ 9 → Gratis</span>
+                        <div class="bx-price"><span class="bx-old">Valor US$ 9</span><span class="bx-free">Gratis</span></div>
                     </div>
                 </div>
-                <div class="bonus-card">
-                    <div class="bonus-number">#3</div>
-                    <div class="bonus-info">
-                        <h3>Lista de Compras Inteligente</h3>
-                        <p>Lista del menú de 7 días organizada por sección del súper, más la guía "Arma tu plato" para comer bien fuera del libro.</p>
-                        <span class="bonus-value">Valor: US$ 7 → Gratis</span>
+                <div class="bx-card">
+                    <div class="bx-visual">
+                        <span class="bx-num">Bono #3</span>
+                        <div class="bx-page bx-page-back"></div>
+                        <img class="bx-page" src="img/bono-3.jpg" alt="Vista del bono Lista de Compras Inteligente" loading="lazy">
                     </div>
+                    <div class="bx-body">
+                        <h3>Lista de Compras Inteligente</h3>
+                        <p>Todo lo que necesitas para el menú de 7 días, organizado por sección del súper. Compras rápido y sin desperdicio.</p>
+                        <div class="bx-price"><span class="bx-old">Valor US$ 7</span><span class="bx-free">Gratis</span></div>
+                    </div>
+                </div>
+                <div class="bx-card">
+                    <div class="bx-visual">
+                        <span class="bx-num">Bono #4</span>
+                        <div class="bx-page bx-page-back"></div>
+                        <img class="bx-page" src="img/bono-4.jpg" alt="Vista del bono Guía "Arma tu Plato"" loading="lazy">
+                    </div>
+                    <div class="bx-body">
+                        <h3>Guía "Arma tu Plato"</h3>
+                        <p>La regla simple para armar un plato completo y con proteína cuando no tienes tiempo de seguir una receta.</p>
+                        <div class="bx-price"><span class="bx-old">Valor US$ 5</span><span class="bx-free">Gratis</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bx-total fade-up">
+                <div class="bx-total-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></div>
+                <div class="bx-total-text">
+                    <span class="bx-total-label">Valor total de los bonos</span>
+                    <span class="bx-total-value"><s>US$ 33</s> <b>Hoy: GRATIS</b></span>
                 </div>
             </div>
         </div>
@@ -2431,7 +2574,7 @@
         <div class="container text-center">
             <span class="section-tag">Oferta especial</span>
             <h2 class="section-title">
-                Todo esto por <span class="text-red">menos que un delivery.</span>
+                Todo esto por<br><span class="text-red">menos que un delivery.</span>
             </h2>
         </div>
 
@@ -2452,11 +2595,13 @@
                 <p class="price-installment">Pago único • Acceso de por vida</p>
                 <a href="https://pay.hotmart.com/Q108301189Q?off=yrs8q4fx&amp;checkoutMode=10" class="cta-button plan-basic-btn js-esencial" target="_blank" rel="noopener" style="width:100%;">QUIERO LA ESENCIAL POR US$ 7</a>
             </div>
-            <div class="offer-card plan-full fade-up"><span class="plan-badge">Más elegida</span>
-                <div class="brand-name" style="font-size:1rem; letter-spacing:4px; margin-bottom:12px;">El Nuevo Apetito</div>
-                <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:8px;">300 Recetas + 3 Bonos Exclusivos</h3>
-                <p style="color:var(--text-secondary); font-size:0.95rem;">Acceso inmediato por e-mail, en PDF</p>
-
+            <div class="offer-card plan-full fade-up">
+                <div class="pf-ribbon">★ Más elegida · Mejor valor</div>
+                <div class="brand-name" style="font-size:1rem; letter-spacing:4px; margin:6px 0 10px;">El Nuevo Apetito</div>
+                <h3 class="pf-title">Edición Completa</h3>
+                <p class="pf-sub">300 recetas + 4 bonos exclusivos</p>
+                <div class="pf-chips"><span>3x más recetas</span><span>4 bonos incluidos</span><span>Solo US$ 8 más</span></div>
+                <div class="pf-thumbs"><img src="img/bono-1.jpg" alt="" loading="lazy"><img src="img/bono-2.jpg" alt="" loading="lazy"><img src="img/bono-3.jpg" alt="" loading="lazy"><img src="img/bono-4.jpg" alt="" loading="lazy"></div>
                 <ul class="offer-includes">
                     <li>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -2483,46 +2628,46 @@
                         Lista de Compras Inteligente
                         <span class="value">US$ 7</span>
                     </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                        Guía "Arma tu Plato"
+                        <span class="value">US$ 5</span>
+                    </li>
                 </ul>
-
-                <div class="price-anchor">
-                    <span class="from">De</span>
-                    <span class="old-price">US$ 37</span>
+                <div class="pf-price">
+                    <div class="pf-total">Valor total: <s>US$ 82</s></div>
+                    <div class="pf-now"><span class="pf-cur">US$</span><span class="pf-amt">15</span></div>
+                    <div class="pf-save">Ahorras US$ 67 · solo 5 centavos por receta</div>
                 </div>
-
-                <div class="price-final">
-                    <span class="currency">US$</span>
-                    <span class="amount">15</span>
-                </div>
-
-                <p class="price-installment">
-                    Pago único • Acceso de por vida<br><small style="opacity:.75">Precio aproximado en dólares. En el checkout lo ves en tu moneda.</small>
-                </p>
-
-                <a href="https://pay.hotmart.com/N108301123X?off=yi29blmw&amp;checkoutMode=10" class="cta-button cta-button-green" target="_blank" rel="noopener" style="width:100%;">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                    QUIERO EL NUEVO APETITO POR US$ 15
-                </a>
-                <span class="cta-sub">Pago 100% seguro con Hotmart • Tarjeta, PayPal o pago en efectivo según tu país • Pagas en tu moneda local • Acceso inmediato</span>
+                <a href="https://pay.hotmart.com/N108301123X?off=yi29blmw&amp;checkoutMode=10" class="cta-button cta-button-green cta-button-pulse pf-cta" target="_blank" rel="noopener" style="width:100%;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> QUIERO LA EDICIÓN COMPLETA</a>
+                <div class="pf-trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pago seguro</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Garantía de 7 días</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> Acceso inmediato</span></div>
+                <p class="pf-note">Pagas en tu moneda local con tarjeta, PayPal o efectivo según tu país.</p>
             </div>
             </div>
         </div>
     </section>
 
     <!-- ============ GUARANTEE ============ -->
-    <section class="guarantee-section">
+    <section class="guarantee-section gt-section">
         <div class="container">
-            <div class="guarantee-box fade-up">
-                <div class="guarantee-badge">
-                    <span class="days">7</span>
-                    <span class="text">días de<br>garantía</span>
+            <div class="gt-box fade-up">
+                <div class="gt-seal">
+                    <svg viewBox="0 0 200 200" class="gt-seal-svg" aria-hidden="true">
+  <defs><linearGradient id="gtg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FF5252"/><stop offset="1" stop-color="#B71C1C"/></linearGradient></defs>
+  <path fill="url(#gtg)" d="M100 6l13 12 17-5 7 16 17 3-1 17 14 10-8 15 8 15-14 10 1 17-17 3-7 16-17-5-13 12-13-12-17 5-7-16-17-3 1-17-14-10 8-15-8-15 14-10-1-17 17-3 7-16 17 5z"/>
+  <circle cx="100" cy="100" r="66" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-dasharray="4 5"/>
+</svg>
+                    <div class="gt-seal-in"><span class="gt-n">7</span><span class="gt-d">días</span><span class="gt-g">Garantía<br>100%</span></div>
                 </div>
-                <div class="guarantee-content">
-                    <h3>Riesgo Cero. La Decisión Es Tuya.</h3>
-                    <p>
-                        Si en un plazo de 7 días sientes que el ebook no valió la pena, solo pide el reembolso y te devolvemos el 100% de tu dinero. Sin preguntas, sin burocracia. No tienes nada que perder.
-                    </p>
+                <span class="section-tag" style="margin-top:8px">Garantía incondicional</span>
+                <h2 class="section-title">Pruébalo 7 días.<br><span class="text-red">Si no te encanta, te devolvemos todo.</span></h2>
+                <p class="gt-lead">El riesgo es nuestro, no tuyo. Compra, abre el libro, cocina las recetas y, si en 7 días sientes que no valió la pena, recibes de vuelta el <b>100% de tu dinero</b>. Sin preguntas y sin burocracia.</p>
+                <div class="gt-steps">
+                    <div class="gt-step"><div class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></div><span class="gt-k">Paso 1</span><h4>Recibe todo al instante</h4><p>El libro y los bonos llegan a tu e-mail apenas confirmas el pago.</p></div>
+                    <div class="gt-step"><div class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg></div><span class="gt-k">Paso 2</span><h4>Pruébalo en tu cocina</h4><p>Tienes 7 días completos para cocinar las recetas y decidir con calma.</p></div>
+                    <div class="gt-step"><div class="gt-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg></div><span class="gt-k">Paso 3</span><h4>¿No te gustó? Reembolso</h4><p>Lo pides directo en Hotmart y te devuelven el 100%, en el mismo medio de pago.</p></div>
                 </div>
+                <div class="gt-pills"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Sin preguntas</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> 100% del dinero de vuelta</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Reembolso procesado por Hotmart</span></div>
             </div>
         </div>
     </section>
@@ -2579,19 +2724,26 @@
     </section>
 
     <!-- ============ FINAL CTA ============ -->
-    <section class="final-cta">
+    <section class="final-cta fc-section">
+        <div class="fc-bg" style="background-image:url(img/final-bg.jpg)"></div>
         <div class="container">
-            <h2>
-                Tu mejor versión <span class="text-red">empieza en el plato.</span>
-            </h2>
-            <p>
-                300 recetas altas en proteína, información nutricional, menú de 7 días, lista de compras y 3 bonos. Todo por menos que un delivery.
-            </p>
-            <a href="https://pay.hotmart.com/N108301123X?off=yi29blmw&amp;checkoutMode=10" class="cta-button cta-button-pulse" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-                QUIERO EL NUEVO APETITO POR US$ 15
-            </a>
-            <span class="cta-sub">Acceso inmediato por e-mail • Garantía de 7 días • Pago seguro</span>
+            <div class="fc-wrap fade-up">
+                <div class="fc-visual">
+                    <div class="fc-glow"></div>
+                    <img class="fc-book" src="img/ebook-completa.jpg" alt="El Nuevo Apetito: Edición Completa, 300 recetas" loading="lazy">
+                    <div class="fc-fan"><img src="img/bono-1.jpg" alt="" loading="lazy"><img src="img/bono-2.jpg" alt="" loading="lazy"><img src="img/bono-3.jpg" alt="" loading="lazy"><img src="img/bono-4.jpg" alt="" loading="lazy"></div>
+                    <span class="fc-tag">+ 4 bonos</span>
+                </div>
+                <div class="fc-copy">
+                    <span class="section-tag">Última oportunidad</span>
+                    <h2>Tu mejor versión<br><span class="text-red">empieza en el plato.</span></h2>
+                    <p class="fc-lead">Cada comida puede sumar. Llévate hoy todo lo que necesitas para comer menos, comer mejor y disfrutar cada bocado.</p>
+                    <ul class="fc-list"><li><span class="fc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>300 recetas altas en proteína en 10 categorías</li><li><span class="fc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Calorías y proteína calculadas en cada receta</li><li><span class="fc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Menú de 7 días + lista de compras</li><li><span class="fc-ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>Índice por proteína + guía "Arma tu plato"</li></ul>
+                    <div class="fc-price"><span class="fc-old">Valor total <s>US$ 82</s></span><span class="fc-new">US$ 15</span><span class="fc-once">pago único</span></div>
+                    <a href="https://pay.hotmart.com/N108301123X?off=yi29blmw&amp;checkoutMode=10" class="cta-button cta-button-green cta-button-pulse fc-cta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg> QUIERO MI EDICIÓN COMPLETA</a>
+                    <div class="fc-trust"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> Acceso inmediato</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> Garantía de 7 días</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Pago seguro</span></div>
+                </div>
+            </div>
         </div>
     </section>
 
