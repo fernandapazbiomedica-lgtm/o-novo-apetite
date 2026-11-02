@@ -65,6 +65,30 @@
             --section-padding: 80px 20px;
         }
 
+
+        /* ===== Planes y pop-up de upgrade ===== */
+        .plans{display:grid;grid-template-columns:1fr 1.15fr;gap:24px;max-width:1040px;margin:0 auto;align-items:center}
+        .plans .offer-card{max-width:none;margin:0}
+        .plan-basic{border-color:var(--dark-border)!important;padding:36px 30px!important}
+        .plan-basic::before{display:none}
+        .plan-basic .price-final .amount{color:var(--text-primary)}
+        .offer-includes li.no{color:var(--text-muted);text-decoration:line-through}
+        .offer-includes li.no svg{color:var(--text-muted)}
+        .plan-basic-btn{background:transparent!important;border:2px solid var(--text-secondary)!important;color:var(--text-primary)!important;box-shadow:none!important}
+        .plan-badge{position:absolute;top:18px;right:-34px;transform:rotate(35deg);background:var(--red);color:#fff;font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:6px 40px}
+        @media (max-width:860px){.plans{grid-template-columns:1fr}.plan-full{order:-1}}
+        .up-modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:none;align-items:center;justify-content:center;z-index:9999;padding:16px}
+        .up-modal.open{display:flex}
+        .up-box{background:var(--dark-card);border:2px solid var(--red);border-radius:20px;max-width:480px;width:100%;padding:34px 26px 26px;text-align:center;position:relative;animation:upIn .25s ease}
+        @keyframes upIn{from{transform:scale(.92);opacity:0}to{transform:none;opacity:1}}
+        .up-close{position:absolute;top:10px;right:14px;background:none;border:0;color:var(--text-secondary);font-size:1.6rem;cursor:pointer;line-height:1}
+        .up-tag{display:inline-block;background:var(--red);color:#fff;font-size:.72rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;border-radius:30px}
+        .up-box h3{font-size:1.6rem;font-weight:900;line-height:1.15;margin:16px 0 10px}
+        .up-box p{color:var(--text-secondary);font-size:.98rem;line-height:1.5}
+        .up-price{margin:18px 0 6px;font-size:1rem;color:var(--text-secondary)}
+        .up-price s{margin-right:8px}
+        .up-price b{font-size:2.4rem;color:var(--red-light);font-weight:900}
+        .up-no{display:inline-block;margin-top:14px;color:var(--text-muted);font-size:.85rem;text-decoration:underline}
         /* ========================================
            UTILITY
            ======================================== */
@@ -2393,7 +2417,23 @@
         </div>
 
         <div class="container">
-            <div class="offer-card fade-up">
+            <div class="plans">
+            <div class="offer-card plan-basic fade-up">
+                <div class="brand-name" style="font-size:1rem; letter-spacing:4px; margin-bottom:12px;">El Nuevo Apetito</div>
+                <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:8px;">Edición Esencial</h3>
+                <p style="color:var(--text-secondary); font-size:0.95rem;">Acceso inmediato por e-mail, en PDF</p>
+                <ul class="offer-includes">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 100 recetas altas en proteína</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Información nutricional completa</li>
+                    <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> 200 recetas extra (freidora, postres, meal prep y más)</li>
+                    <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> Menú de 7 días</li>
+                    <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg> Lista de compras e índice por proteína</li>
+                </ul>
+                <div class="price-final"><span class="currency">US$</span><span class="amount">7</span></div>
+                <p class="price-installment">Pago único • Acceso de por vida</p>
+                <a href="https://pay.hotmart.com/Q108301189Q?off=yrs8q4fx&amp;checkoutMode=10" class="cta-button plan-basic-btn js-esencial" target="_blank" rel="noopener" style="width:100%;">QUIERO LA ESENCIAL POR US$ 7</a>
+            </div>
+            <div class="offer-card plan-full fade-up"><span class="plan-badge">Más elegida</span>
                 <div class="brand-name" style="font-size:1rem; letter-spacing:4px; margin-bottom:12px;">El Nuevo Apetito</div>
                 <h3 style="font-size:1.3rem; font-weight:800; margin-bottom:8px;">300 Recetas + 3 Bonos Exclusivos</h3>
                 <p style="color:var(--text-secondary); font-size:0.95rem;">Acceso inmediato por e-mail, en PDF</p>
@@ -2445,6 +2485,7 @@
                     QUIERO EL NUEVO APETITO POR US$ 15
                 </a>
                 <span class="cta-sub">Pago 100% seguro con Hotmart • Tarjeta, PayPal o pago en efectivo según tu país • Pagas en tu moneda local • Acceso inmediato</span>
+            </div>
             </div>
         </div>
     </section>
@@ -2773,6 +2814,26 @@
             img.src = fig.getAttribute('data-foto');
         });
     })();
+    </script>
+
+    <!-- Pop-up de upgrade (Esencial -> Completa US$10) -->
+    <div class="up-modal" id="upModal" role="dialog" aria-modal="true" aria-labelledby="upTitle">
+        <div class="up-box">
+            <button class="up-close" type="button" aria-label="Cerrar" onclick="closeUp()">&times;</button>
+            <span class="up-tag">¡Espera! Oferta única</span>
+            <h3 id="upTitle">Llévate las <span class="text-red">300 recetas</span> por solo US$ 10</h3>
+            <p>Por apenas US$ 3 más que la Esencial recibes la Edición Completa: <b style="color:#fff">200 recetas extra</b>, menú de 7 días, lista de compras e índice por proteína.</p>
+            <div class="up-price"><s>US$ 15</s><b>US$ 10</b></div>
+            <p style="font-size:.85rem">Esta oferta aparece solo en esta pantalla.</p>
+            <a href="https://pay.hotmart.com/N108301123X?off=hy4ggjgs&amp;checkoutMode=10" class="cta-button cta-button-green" target="_blank" rel="noopener" style="width:100%;margin-top:16px;">SÍ, QUIERO LAS 300 RECETAS POR US$ 10</a>
+            <a href="https://pay.hotmart.com/Q108301189Q?off=yrs8q4fx&amp;checkoutMode=10" class="up-no" target="_blank" rel="noopener">No, gracias. Quiero solo 100 recetas por US$ 7</a>
+        </div>
+    </div>
+    <script>
+    function closeUp(){document.getElementById('upModal').classList.remove('open');}
+    document.querySelectorAll('.js-esencial').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();document.getElementById('upModal').classList.add('open');try{fbq('trackCustom','UpgradePopupView');}catch(x){}});});
+    document.getElementById('upModal').addEventListener('click',function(e){if(e.target===this)closeUp();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeUp();});
     </script>
 </body>
 </html>
