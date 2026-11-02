@@ -2037,6 +2037,11 @@
         }
         @media (prefers-reduced-motion:reduce){.hx *{animation:none!important}.hx-in{opacity:1;transform:none}}
 
+        .depo-avatar{width:46px;height:46px;background:linear-gradient(135deg,var(--a,#E53935),var(--b,#8E1B18))!important;font-size:1.05rem;letter-spacing:.5px;box-shadow:0 0 0 2px #111,0 0 0 4px color-mix(in srgb,var(--a,#E53935) 55%,transparent),0 6px 16px rgba(0,0,0,.45)!important;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+        .depo-who{display:flex;flex-direction:column;gap:3px;min-width:0}
+        .depo-ok{display:inline-flex;align-items:center;gap:4px;font-size:.66rem;font-weight:700;color:#15803D;letter-spacing:.2px}
+        .depo-ok svg{width:11px;height:11px;padding:2px;border-radius:50%;background:#DCFCE7;box-sizing:content-box}
+        .depo-topo{align-items:flex-start!important}
         .depo-nota{text-align:center;font-size:.78rem;color:#777;margin:18px auto 0;padding:0 20px;max-width:640px}
         /* ===== SELETOR DE IDIOMA ===== */
         .lsw{display:inline-flex;align-items:center;gap:4px;background:#fff;border-radius:999px;padding:4px;box-shadow:0 4px 16px rgba(0,0,0,.35);font:800 13px/1 'Inter',system-ui,sans-serif;white-space:nowrap}
@@ -2518,9 +2523,9 @@
         <div class="container">
             <div class="depo-grid">
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-rogerio-perfil.jpg" aria-hidden="true">A</span>
+                    <span class="depo-avatar" style="--a:#E53935;--b:#8E1B18" data-foto="/50receitasfitness/depo-rogerio-perfil.jpg" aria-hidden="true">A</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Alejandro, 45</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Alejandro, 45</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Ya estaba cansado del pollo con camote jaja. Entreno y quiero comer mejor, pero también quiero comer algo rico. Hice el panqueque de plátano y quedó muy bueno. Ya lo hice unas 3 veces.</p>
                         <figure class="depo-foto" data-foto="/50receitasfitness/depo-rogerio-prato.jpg" hidden>
                             <img alt="Panqueque de plátano · foto de Alejandro" loading="lazy">
@@ -2529,16 +2534,16 @@
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-camila-perfil.jpg" aria-hidden="true">V</span>
+                    <span class="depo-avatar" style="--a:#8B5CF6;--b:#5B21B6" data-foto="/50receitasfitness/depo-camila-perfil.jpg" aria-hidden="true">V</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Valentina, 28</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Valentina, 28</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Para mí lo mejor fue lograr organizarme. Trabajo todo el día y antes llegaba a casa con hambre y pedía cualquier cosa. Ahora dejo algunas cosas listas y llevo mi tupper. Me facilitó MUCHO.</p>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-jacielma-perfil.jpg" aria-hidden="true">R</span>
+                    <span class="depo-avatar" style="--a:#16A34A;--b:#14532D" data-foto="/50receitasfitness/depo-jacielma-perfil.jpg" aria-hidden="true">R</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Rosa, 60</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Rosa, 60</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Me gustó mucho porque no me pareció difícil. Yo no soy de hacer recetas complicadas. Hice el de chía con yogur y salió a la primera. Los ingredientes también son cosas que uno encuentra normalmente en el supermercado.</p>
                         <figure class="depo-foto" data-foto="/50receitasfitness/depo-jacielma-prato.jpg" hidden>
                             <img alt="Pudín de chía con yogur · foto de Rosa" loading="lazy">
@@ -2547,9 +2552,9 @@
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-renata-perfil.jpg" aria-hidden="true">V</span>
+                    <span class="depo-avatar" style="--a:#0EA5E9;--b:#075985" data-foto="/50receitasfitness/depo-renata-perfil.jpg" aria-hidden="true">V</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Verónica, 44</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Verónica, 44</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">¡Aquí en casa todos comieron! Hice la carne deshebrada con puré y ni dije que era una receta ‘fitness’. A mi esposo le gustó, a mis hijos también. Eso para mí fue lo mejor.</p>
                         <figure class="depo-foto" data-foto="/50receitasfitness/depo-renata-prato.jpg" hidden>
                             <img alt="Carne deshebrada con puré · foto de Verónica" loading="lazy">
@@ -2558,9 +2563,9 @@
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-juliana-perfil.jpg" aria-hidden="true">L</span>
+                    <span class="depo-avatar" style="--a:#F59E0B;--b:#B45309" data-foto="/50receitasfitness/depo-juliana-perfil.jpg" aria-hidden="true">L</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Lucía, 37</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Lucía, 37</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Yo soy la persona que siempre dice ‘solo un dulcecito’ y cuando se da cuenta ya se acabó todo el postre. Así que tener opciones dulces que puedo hacer en casa me ayudó bastante. El brigadeiro proteico fue el primero que hice y me encantó, este no sabía a tierra jaja.</p>
                         <figure class="depo-foto" data-foto="/50receitasfitness/depo-juliana-prato.jpg" hidden>
                             <img alt="Brigadeiro proteico · foto de Lucía" loading="lazy">
@@ -2569,16 +2574,16 @@
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-patricia-perfil.jpg" aria-hidden="true">G</span>
+                    <span class="depo-avatar" style="--a:#EC4899;--b:#9D174D" data-foto="/50receitasfitness/depo-patricia-perfil.jpg" aria-hidden="true">G</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Guadalupe, 39</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Guadalupe, 39</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Lo que más cambió fue dejar de pensar ‘¿qué voy a comer hoy?’. Parece una tontería, pero perdía mucho tiempo con eso. Ahora tengo varias opciones para elegir. mi esposo lo agradece jajajaja</p>
                     </div>
                 </article>
                 <article class="depo-card">
-                    <span class="depo-avatar" data-foto="/50receitasfitness/depo-daniel-perfil.jpg" aria-hidden="true">D</span>
+                    <span class="depo-avatar" style="--a:#14B8A6;--b:#0F766E" data-foto="/50receitasfitness/depo-daniel-perfil.jpg" aria-hidden="true">D</span>
                     <div class="depo-balao">
-                        <div class="depo-topo"><span class="depo-nome">Diego, 34</span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
+                        <div class="depo-topo"><span class="depo-who"><span class="depo-nome">Diego, 34</span><span class="depo-ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Probó la receta</span></span><span class="depo-stars" aria-label="5 de 5 estrellas">★★★★★</span></div>
                         <p class="depo-texto">Me gustó porque no tiene eso de receta fitness en la que miras los ingredientes y piensas: ¿de dónde voy a sacar esto? Son cosas normales y el resultado queda bueno.</p>
                     </div>
                 </article>
