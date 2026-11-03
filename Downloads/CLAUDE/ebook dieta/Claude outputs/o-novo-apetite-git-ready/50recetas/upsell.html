@@ -87,6 +87,167 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 .anc{text-align:center;color:#cfcfcf;font-size:15px}
 .anc b{color:#fff}
 @media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;height:auto;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+
+/* ===== v2 secciones ===== */
+.sec{position:relative;margin:26px 0 18px;padding:28px 18px 24px;border-radius:22px;background:linear-gradient(180deg,#171212,#101010);border:1px solid rgba(225,29,42,.28);box-shadow:0 30px 70px -40px rgba(225,29,42,.55);overflow:hidden}
+.sec:before{content:"";position:absolute;inset:-40% -20% auto;height:70%;background:radial-gradient(closest-side,rgba(225,29,42,.18),transparent);pointer-events:none}
+.sec-h{position:relative;text-align:center;margin-bottom:20px}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#ffb3b8;background:rgba(225,29,42,.14);border:1px solid rgba(225,29,42,.45);padding:7px 14px;border-radius:999px}
+.sec-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:#e11d2a;box-shadow:0 0 0 4px rgba(225,29,42,.2)}
+.sec-h h2{font-size:26px;line-height:1.15;font-weight:800;margin:14px 0 6px;letter-spacing:-.4px}
+.sec-h h2 span{color:#ff3b47}
+.sec-h p{color:#bdbdbd;font-size:15px;max-width:520px;margin:0 auto}
+/* timeline */
+.tl{position:relative;list-style:none;display:grid;gap:14px}
+.tl:before{content:"";position:absolute;left:27px;top:28px;bottom:28px;width:2px;background:linear-gradient(#e11d2a,rgba(225,29,42,.15))}
+.tl li{position:relative;display:flex;gap:14px;align-items:flex-start;padding:14px 14px 14px 0}
+.tl .n{position:relative;z-index:1;flex:none;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(145deg,#ff4d57,#b3121f);box-shadow:0 10px 24px rgba(225,29,42,.35),inset 0 1px 0 rgba(255,255,255,.25)}
+.tl .n svg{width:26px;height:26px}
+.tl .n b{position:absolute;top:-7px;right:-7px;width:22px;height:22px;border-radius:50%;background:#fff;color:#b3121f;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.tl .c{flex:1;background:#141414;border:1px solid #262626;border-radius:16px;padding:12px 14px}
+.tl .c h4{font-size:16px;font-weight:800;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tl .c h4 small{flex:none;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#86efac;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);padding:3px 8px;border-radius:999px}
+.tl .c p{font-size:14px;color:#bdbdbd;margin-top:3px;line-height:1.5}
+.tl-sum{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.tl-sum div{text-align:center;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:14px;padding:12px 6px}
+.tl-sum b{display:block;font-size:22px;font-weight:800;color:#fff;line-height:1}
+.tl-sum span{display:block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9a9a9a;margin-top:5px}
+/* recibes */
+.grp{position:relative;margin-top:16px}
+.grp-t{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#ff6b74;margin-bottom:10px}
+.grp-t:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(225,29,42,.5),transparent)}
+.gi{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.it{position:relative;background:linear-gradient(180deg,#191919,#121212);border:1px solid #2a2a2a;border-radius:16px;padding:14px 12px 13px;transition:border-color .2s,transform .2s}
+.it:hover{border-color:rgba(225,29,42,.6);transform:translateY(-2px)}
+.it.w{grid-column:1/-1;display:flex;gap:12px;align-items:center}
+.it .ico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#ff6b74;background:rgba(225,29,42,.14);border:1px solid rgba(225,29,42,.35);margin-bottom:10px;flex:none}
+.it.w .ico{margin-bottom:0}
+.it .ico svg{width:20px;height:20px}
+.it .num{font-size:30px;font-weight:800;line-height:1;color:#fff;letter-spacing:-1px}
+.it .num small{font-size:13px;font-weight:700;color:#ff6b74;letter-spacing:0;margin-left:3px}
+.it h4{font-size:14px;font-weight:800;color:#fff;margin-top:6px;line-height:1.25}
+.it p{font-size:12.5px;color:#a9a9a9;margin-top:4px;line-height:1.45}
+.it .new{position:absolute;top:10px;right:10px;font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#06210f;background:#22c55e;padding:3px 7px;border-radius:999px}
+.lv{position:relative;margin-top:18px;text-align:center;background:#0d0d0d;border:1px dashed rgba(225,29,42,.5);border-radius:16px;padding:14px 10px}
+.lv p{font-size:13px;color:#cfcfcf;margin-bottom:10px}.lv p b{color:#fff}
+.lv-row{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+.lv-row span{flex:1 1 0;min-width:56px;padding:9px 0;border-radius:12px;background:#171717;border:1px solid #2e2e2e;font-weight:800;font-size:16px;color:#fff;line-height:1.1}
+.lv-row span small{display:block;font-size:10px;color:#9a9a9a;font-weight:700;letter-spacing:1px}
+.lv-row span.on{background:linear-gradient(145deg,#ff4d57,#b3121f);border-color:#ff4d57;box-shadow:0 8px 20px rgba(225,29,42,.35)}
+.lv-row span.on small{color:#ffd5d8}
+/* garantia */
+.gt{position:relative;margin:26px 0 10px;text-align:center;padding:30px 18px 22px;border-radius:22px;border:1px solid rgba(34,197,94,.4);background:radial-gradient(90% 60% at 50% 0%,rgba(34,197,94,.18),transparent 70%),linear-gradient(180deg,#0f1a14,#0c0f0d);box-shadow:0 30px 70px -40px rgba(34,197,94,.55)}
+.gt-seal{position:relative;width:132px;height:132px;margin:0 auto 10px;filter:drop-shadow(0 12px 26px rgba(34,197,94,.45))}
+.gt-seal svg{width:100%;height:100%}
+.gt-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#06210f;line-height:1}
+.gt-in b{font-size:46px;font-weight:800}
+.gt-in span{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.gt h3{font-size:24px;font-weight:800;line-height:1.2;margin:4px 0 8px}
+.gt h3 span{color:#4ade80}
+.gt>p{font-size:15px;color:#cfe6d6;max-width:500px;margin:0 auto}
+.gt-st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.gt-st div{background:rgba(255,255,255,.03);border:1px solid rgba(34,197,94,.25);border-radius:14px;padding:12px 6px}
+.gt-st i{display:flex;width:34px;height:34px;margin:0 auto 6px;border-radius:50%;align-items:center;justify-content:center;background:rgba(34,197,94,.15);color:#4ade80}
+.gt-st i svg{width:18px;height:18px}
+.gt-st b{display:block;font-size:12.5px;color:#fff;line-height:1.3}
+.gt-pl{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.gt-pl span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#bbf7d0;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);padding:6px 11px;border-radius:999px}
+.gt-pl svg{width:13px;height:13px}
+@media(min-width:620px){.gi{grid-template-columns:repeat(3,1fr)}.it.w{grid-column:span 3}.sec{padding:34px 28px 28px}.sec-h h2{font-size:30px}}
+
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;height:auto;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+
+/* ===== v2 secciones ===== */
+.sec{position:relative;margin:26px 0 18px;padding:28px 18px 24px;border-radius:22px;background:linear-gradient(180deg,#171212,#101010);border:1px solid rgba(225,29,42,.28);box-shadow:0 30px 70px -40px rgba(225,29,42,.55);overflow:hidden}
+.sec:before{content:"";position:absolute;inset:-40% -20% auto;height:70%;background:radial-gradient(closest-side,rgba(225,29,42,.18),transparent);pointer-events:none}
+.sec-h{position:relative;text-align:center;margin-bottom:20px}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#ffb3b8;background:rgba(225,29,42,.14);border:1px solid rgba(225,29,42,.45);padding:7px 14px;border-radius:999px}
+.sec-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:#e11d2a;box-shadow:0 0 0 4px rgba(225,29,42,.2)}
+.sec-h h2{font-size:26px;line-height:1.15;font-weight:800;margin:14px 0 6px;letter-spacing:-.4px}
+.sec-h h2 span{color:#ff3b47}
+.sec-h p{color:#bdbdbd;font-size:15px;max-width:520px;margin:0 auto}
+/* timeline */
+.tl{position:relative;list-style:none;display:grid;gap:14px}
+.tl:before{content:"";position:absolute;left:27px;top:28px;bottom:90px;width:2px;background:linear-gradient(#e11d2a,rgba(225,29,42,.15))}
+.tl li{position:relative;display:flex;gap:14px;align-items:flex-start;padding:14px 14px 14px 0}
+.tl .n{position:relative;z-index:1;flex:none;width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;background:linear-gradient(145deg,#ff4d57,#b3121f);box-shadow:0 10px 24px rgba(225,29,42,.35),inset 0 1px 0 rgba(255,255,255,.25)}
+.tl .n svg{width:26px;height:26px}
+.tl .n b{position:absolute;top:-7px;right:-7px;width:22px;height:22px;border-radius:50%;background:#fff;color:#b3121f;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.tl .c{flex:1;background:#141414;border:1px solid #262626;border-radius:16px;padding:12px 14px}
+.tl .c h4{font-size:16px;font-weight:800;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.tl .c h4 small{flex:none;font-size:10.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#86efac;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);padding:3px 8px;border-radius:999px}
+.tl .c p{font-size:14px;color:#bdbdbd;margin-top:3px;line-height:1.5}
+.tl-sum{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.tl-sum div{text-align:center;background:#0d0d0d;border:1px solid #2a2a2a;border-radius:14px;padding:12px 6px}
+.tl-sum b{display:block;font-size:22px;font-weight:800;color:#fff;line-height:1}
+.tl-sum span{display:block;font-size:10.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#9a9a9a;margin-top:5px}
+/* recibes */
+.grp{position:relative;margin-top:16px}
+.grp-t{display:flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#ff6b74;margin-bottom:10px}
+.grp-t:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(225,29,42,.5),transparent)}
+.gi{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.it{position:relative;background:linear-gradient(180deg,#191919,#121212);border:1px solid #2a2a2a;border-radius:16px;padding:14px 12px 13px;transition:border-color .2s,transform .2s}
+.it:hover{border-color:rgba(225,29,42,.6);transform:translateY(-2px)}
+.it.w{grid-column:1/-1;display:flex;gap:12px;align-items:center}
+.it .ico{width:38px;height:38px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#ff6b74;background:rgba(225,29,42,.14);border:1px solid rgba(225,29,42,.35);margin-bottom:10px;flex:none}
+.it.w .ico{margin-bottom:0}
+.it .ico svg{width:20px;height:20px}
+.it .num{font-size:30px;font-weight:800;line-height:1;color:#fff;letter-spacing:-1px}
+.it .num small{font-size:13px;font-weight:700;color:#ff6b74;letter-spacing:0;margin-left:3px}
+.it h4{font-size:14px;font-weight:800;color:#fff;margin-top:6px;line-height:1.25}
+.it p{font-size:12.5px;color:#a9a9a9;margin-top:4px;line-height:1.45}
+.it .new{position:absolute;top:10px;right:10px;font-size:9.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#06210f;background:#22c55e;padding:3px 7px;border-radius:999px}
+.lv{position:relative;margin-top:18px;text-align:center;background:#0d0d0d;border:1px dashed rgba(225,29,42,.5);border-radius:16px;padding:14px 10px}
+.lv p{font-size:13px;color:#cfcfcf;margin-bottom:10px}.lv p b{color:#fff}
+.lv-row{display:flex;gap:5px;justify-content:center}
+.lv-row span{flex:1 1 0;min-width:0;padding:9px 0;border-radius:12px;background:#171717;border:1px solid #2e2e2e;font-weight:800;font-size:15px;color:#fff;line-height:1.1}
+.lv-row span small{display:block;font-size:10px;color:#9a9a9a;font-weight:700;letter-spacing:1px}
+.lv-row span.on{background:linear-gradient(145deg,#ff4d57,#b3121f);border-color:#ff4d57;box-shadow:0 8px 20px rgba(225,29,42,.35)}
+.lv-row span.on small{color:#ffd5d8}
+/* garantia */
+.gt{position:relative;margin:26px 0 10px;text-align:center;padding:30px 18px 22px;border-radius:22px;border:1px solid rgba(34,197,94,.4);background:radial-gradient(90% 60% at 50% 0%,rgba(34,197,94,.18),transparent 70%),linear-gradient(180deg,#0f1a14,#0c0f0d);box-shadow:0 30px 70px -40px rgba(34,197,94,.55)}
+.gt-seal{position:relative;width:132px;height:132px;margin:0 auto 10px;filter:drop-shadow(0 12px 26px rgba(34,197,94,.45))}
+.gt-seal svg{width:100%;height:100%}
+.gt-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#06210f;line-height:1}
+.gt-in b{font-size:50px;font-weight:800;margin-top:-4px}
+.gt-in span{font-size:11px;margin-top:2px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+.gt h3{font-size:24px;font-weight:800;line-height:1.2;margin:4px 0 8px}
+.gt h3 span{color:#4ade80}
+.gt>p{font-size:15px;color:#cfe6d6;max-width:500px;margin:0 auto}
+.gt-st{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:18px}
+.gt-st div{background:rgba(255,255,255,.03);border:1px solid rgba(34,197,94,.25);border-radius:14px;padding:12px 6px}
+.gt-st i{display:flex;width:34px;height:34px;margin:0 auto 6px;border-radius:50%;align-items:center;justify-content:center;background:rgba(34,197,94,.15);color:#4ade80}
+.gt-st i svg{width:18px;height:18px}
+.gt-st b{display:block;font-size:12.5px;color:#fff;line-height:1.3}
+.gt-pl{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:16px}
+.gt-pl span{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#bbf7d0;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);padding:6px 11px;border-radius:999px}
+.gt-pl svg{width:13px;height:13px}
+@media(max-width:619px){.gi .it:nth-child(3):not(.w){grid-column:1/-1;display:grid;grid-template-columns:38px 1fr;column-gap:12px;align-items:start}.gi .it:nth-child(3) .ico{grid-row:1/span 3;margin-bottom:0}.gi .it:nth-child(3) .num{font-size:26px}}
+@media(min-width:620px){.gi{grid-template-columns:repeat(3,1fr)}.it.w{grid-column:span 3}.sec{padding:34px 28px 28px}.sec-h h2{font-size:30px}}
+
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
 </style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');var nvaEid;try{nvaEid=localStorage.getItem('nva_eid');if(!nvaEid){nvaEid='v'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('nva_eid',nvaEid);}}catch(e){}fbq('init','1771961234064362',nvaEid?{external_id:nvaEid}:{});fbq('track','PageView');</script></head><body>
 <div class="bar"><span class="dot"></span>ESPERA: TU PEDIDO TODAVÍA NO TERMINÓ<small>NO CIERRES ESTA PÁGINA</small></div><div class="wrap"><div class="hero"><div class="prog"><div class="s done"><div class="c">✓</div>Compra confirmada</div><div class="ln g"></div><div class="s on"><div class="c">2</div>Oferta única</div><div class="ln"></div><div class="s "><div class="c">3</div>Acceso</div></div><div class="kick">Exclusivo para quien acaba de comprar</div><h1>Ya tienes las recetas. <em>Ahora deja de pensar</em> qué comer durante 90 días.</h1><img class="heroimg" src="img/up-hero.jpg" alt="" width="1152" height="648"><p class="sub">El Programa 90 Días te dice exactamente qué comer en cada comida, qué comprar cada semana y qué preparar el domingo. Tú solo abres, sigues y comes.</p><a class="go" href="#oferta">Ver la oferta ↓</a></div>
 <div class="hl">No te falta fuerza de voluntad. <b>Te falta un plan que decida por ti.</b> Tener recetas es el primer paso, pero todos los días tienes que decidir qué comer 4 o 5 veces, y esas decisiones cansan.</div>
@@ -99,18 +260,8 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 <tr><td class="r">Si algo falla</td><td>Empiezas de cero</td><td class="y">Guías para días difíciles y Protocolo de Recomienzo</td></tr>
 <tr><td class="r">Progreso</td><td>Nada que marcar</td><td class="y">Diario de 90 días con revisiones en los días 30, 60 y 90</td></tr></table></div>
 <div class="card" style="text-align:center"><div class="k">Así se ve en tu celular</div><div class="t">Abres la galería y ya sabes qué comer hoy</div><p style="color:#cfcfcf;font-size:15px">Cada día con sus 5 comidas, calorías y proteína ya calculadas. Separado por nivel, para que guardes solo el tuyo.</p><div class="phones"><img src="img/cel-1.jpg" alt="Menú semana 1" loading="lazy"><img src="img/cel-2.jpg" alt="Menú semana 1" loading="lazy"><img src="img/cel-3.jpg" alt="Menú semana 1" loading="lazy"></div></div>
-<div class="card red"><div class="k">Programa 90 Días · El Nuevo Apetito</div><div class="t">Lo que recibes</div><ul class="check">
-<li><b>12 semanas de menús listos</b>: desayuno, colación, almuerzo, merienda y cena de cada día</li>
-<li><b>5 niveles de calorías</b>, para que el plan se adapte a ti y no al revés</li>
-<li><b>100 recetas exclusivas</b> que no están en tu libro</li>
-<li><b>12 listas de compras</b>, una por semana, organizadas por sección</li>
-<li><b>12 planes de preparación</b> para dejar la semana lista el domingo</li>
-<li><b>12 hojas de refrigerador</b> para imprimir: la semana entera de un vistazo</li>
-<li><b>240 menús para el celular</b>, listos para guardar en la galería</li>
-<li><b>Guía "Empieza hoy"</b>: qué hacer en tus primeras 24 horas</li>
-<li><b>Guías para días difíciles</b>: poco apetito, mucha hambre, antojos, fiestas, restaurantes y viajes</li>
-<li><b>Protocolo de Recomienzo</b> y <b>Diario de 90 días</b></li></ul><div class="kcal"><div>1200<small>kcal</small></div><div>1400<small>kcal</small></div><div>1600<small>kcal</small></div><div>1800<small>kcal</small></div><div>2000<small>kcal</small></div></div></div>
-<div class="card" style="text-align:center"><div class="k">Cómo funciona</div><div class="t">4 pasos, cero decisiones</div><ol class="steps"><li><b>Elige tu nivel</b> de calorías (2 minutos)</li><li><b>Compra</b> con la lista de la semana</li><li><b>Prepara</b> el domingo siguiendo el plan</li><li><b>Come</b> siguiendo tu menú y marca tu avance</li></ol></div>
+<div class="sec"><div class="sec-h"><span class="sec-tag">Programa 90 Días</span><h2>Todo lo que recibes <span>hoy</span></h2><p>Un sistema completo para comer bien durante 3 meses sin pensar qué cocinar.</p></div><div class="grp"><div class="grp-t">El plan</div><div class="gi"><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg></div><div class="num">12<small>sem.</small></div><h4>Menús listos</h4><p>Desayuno, colación, almuerzo, merienda y cena de cada día</p></div><div class="it"><span class="new">Exclusivo</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M12 6v6M9 9h6"/></svg></div><div class="num">100<small>recetas</small></div><h4>Recetas nuevas</h4><p>Que no están en tu libro</p></div><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg></div><div class="num">5<small>niveles</small></div><h4>De calorías</h4><p>El plan se adapta a ti, no al revés</p></div></div></div><div class="grp"><div class="grp-t">Tu semana resuelta</div><div class="gi"><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div><div class="num">12<small>listas</small></div><h4>Listas de compras</h4><p>Una por semana, por sección del súper</p></div><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4M8.86 6.78l-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></svg></div><div class="num">12<small>planes</small></div><h4>Preparación del domingo</h4><p>Qué cocinar y en qué orden, en unas 2 h</p></div><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M5 10h14M9 5v2M9 13v3"/></svg></div><div class="num">12<small>hojas</small></div><h4>Hojas de refrigerador</h4><p>Para imprimir: la semana de un vistazo</p></div></div></div><div class="grp"><div class="grp-t">En tu celular</div><div class="gi"><div class="it"><span class="new">Exclusivo</span><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg></div><div class="num">240<small>menús</small></div><h4>Menús en imagen</h4><p>Listos para guardar en tu galería</p></div><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div><h4>Guía "Empieza hoy"</h4><p>Qué hacer en tus primeras 24 horas</p></div><div class="it"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div><h4>Guías para días difíciles</h4><p>Poco apetito, antojos, fiestas, restaurantes y viajes</p></div></div></div><div class="grp"><div class="grp-t">Para no abandonar</div><div class="gi"><div class="it w"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></div><div><h4 style="margin-top:0">Protocolo de Recomienzo + Diario de 90 días</h4><p>Cómo volver al plan después de un desliz y revisiones de tu avance en los días 30, 60 y 90</p></div></div></div></div><div class="lv"><p><b>Elige tu nivel</b> en 2 minutos con la guía incluida</p><div class="lv-row"><span>1200<small>kcal</small></span><span>1400<small>kcal</small></span><span class="on">1600<small>kcal</small></span><span>1800<small>kcal</small></span><span>2000<small>kcal</small></span></div></div></div>
+<div class="sec"><div class="sec-h"><span class="sec-tag">Cómo funciona</span><h2>Tu semana en <span>4 pasos</span>.<br>Cero decisiones.</h2><p>Lo hiciste una vez y la semana ya está resuelta.</p></div><ol class="tl"><li><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><b>1</b></div><div class="c"><h4>Elige tu nivel<small>2 min</small></h4><p>Con la guía, encuentras tus calorías y abres tus menús.</p></div></li><li><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg><b>2</b></div><div class="c"><h4>Compra<small>1 vez</small></h4><p>Llevas la lista de la semana al súper. Nada de más, nada de menos.</p></div></li><li><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8"/><path d="m4 8 16-4M8.86 6.78l-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8"/></svg><b>3</b></div><div class="c"><h4>Prepara<small>Domingo</small></h4><p>Sigues el plan de preparación y dejas la semana lista en unas 2 h.</p></div></li><li><div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg><b>4</b></div><div class="c"><h4>Come y avanza<small>Cada día</small></h4><p>Abres el menú en tu celular, comes y marcas tu avance.</p></div></li></ol><div class="tl-sum"><div><b>~2 h</b><span>por semana</span></div><div><b>0</b><span>decisiones</span></div><div><b>90</b><span>días resueltos</span></div></div></div>
 <div class="card"><p class="anc">Un plan de alimentación semanal con un profesional suele costar mucho más que esto, y casi siempre se paga <b>mes a mes</b>. Aquí tienes <b>3 meses completos</b> por un único pago.</p></div>
 <div class="price" id="oferta"><div class="tag">OFERTA ÚNICA · SOLO EN ESTA PÁGINA</div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>27</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Solo <b>US$ 0,30 por día</b> para tener 3 meses resueltos</div><div class="vs">Menos que un café por día.</div><div class="note">Solo en esta página · el cargo final se muestra en tu moneda local</div></div>
 <div class="hotmart-funnel" style="margin:18px 0 8px;text-align:center"><!-- HOTMART - Sales Funnel Widget -->
@@ -120,6 +271,6 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
 </script>
 <!-- HOTMART - Sales Funnel Widget --></div>
-<div class="guar"><b>7 días de garantía</b><p>Si no es para ti, pides el reembolso y te devolvemos el 100%, sin preguntas.</p></div>
+<div class="gt"><div class="gt-seal"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4ade80"/><stop offset="1" stop-color="#15803d"/></linearGradient></defs><path fill="url(#gg)" d="M100.0 4.0 L111.0 16.7 L124.8 7.3 L132.1 22.4 L148.0 16.9 L151.1 33.4 L167.9 32.1 L166.6 48.9 L183.1 52.0 L177.6 67.9 L192.7 75.2 L183.3 89.0 L196.0 100.0 L183.3 111.0 L192.7 124.8 L177.6 132.1 L183.1 148.0 L166.6 151.1 L167.9 167.9 L151.1 166.6 L148.0 183.1 L132.1 177.6 L124.8 192.7 L111.0 183.3 L100.0 196.0 L89.0 183.3 L75.2 192.7 L67.9 177.6 L52.0 183.1 L48.9 166.6 L32.1 167.9 L33.4 151.1 L16.9 148.0 L22.4 132.1 L7.3 124.8 L16.7 111.0 L4.0 100.0 L16.7 89.0 L7.3 75.2 L22.4 67.9 L16.9 52.0 L33.4 48.9 L32.1 32.1 L48.9 33.4 L52.0 16.9 L67.9 22.4 L75.2 7.3 L89.0 16.7Z"/><circle cx="100" cy="100" r="70" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="2" stroke-dasharray="4 5"/></svg><div class="gt-in"><b>7</b><span>días</span></div></div><h3>Pruébalo 7 días.<br><span>El riesgo es nuestro.</span></h3><p>Si en 7 días sientes que no es para ti, pides el reembolso y te devolvemos el <b>100% de tu dinero</b>. Sin preguntas.</p><div class="gt-st"><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></i><b>Recibes el acceso al instante</b></div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></i><b>Lo usas durante 7 días</b></div><div><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg></i><b>¿No te gustó? Reembolso total</b></div></div><div class="gt-pl"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sin preguntas</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Garantía Hotmart</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Pago seguro</span></div></div>
 <p class="disc">Programa educativo con menús genéricos por nivel de calorías. No sustituye la orientación individual de un(a) nutricionista o médico(a).</p>
 </div></body></html>
