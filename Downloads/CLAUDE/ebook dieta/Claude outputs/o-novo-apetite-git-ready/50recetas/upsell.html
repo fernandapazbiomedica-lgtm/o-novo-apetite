@@ -1,5 +1,5 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex"><title>Espera: tu plan de 30 días</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+<meta name="robots" content="noindex"><title>Espera: tu Programa 90 Días</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0e0e0e;color:#f2f2f2;font-family:'Montserrat','Segoe UI',Arial,sans-serif;line-height:1.6}
 .wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
@@ -63,9 +63,56 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 .hl{background:#1f1214;border:1px solid #3a1a1d;border-radius:12px;padding:14px 16px;margin:0 0 16px;font-size:15px;color:#e6e6e6;text-align:center}
 .hl b{color:#fff}
 .disc{text-align:center;font-size:11px;color:#6f6f6f;margin-top:28px}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;height:auto;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
 </style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');var nvaEid;try{nvaEid=localStorage.getItem('nva_eid');if(!nvaEid){nvaEid='v'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('nva_eid',nvaEid);}}catch(e){}fbq('init','1771961234064362',nvaEid?{external_id:nvaEid}:{});fbq('track','PageView');</script></head><body>
-<div class="bar"><span class="dot"></span>ESPERA: TU PEDIDO TODAVÍA NO TERMINÓ<small>NO CIERRES ESTA PÁGINA</small></div><div class="wrap"><div class="hero"><div class="prog"><div class="s done"><div class="c">✓</div>Compra confirmada</div><div class="ln g"></div><div class="s on"><div class="c">2</div>Oferta única</div><div class="ln"></div><div class="s "><div class="c">3</div>Acceso</div></div><div class="kick">Exclusivo para nuevos clientes</div><h1>Los menús visuales son <em>1 día</em>. Esto son <em>30</em>.</h1><!-- VSL: para poner el video, define VSL_ID con el ID de YouTube en upsell.py --><div class="vsl" id="vsl"><div class="ph"><div class="play"></div><b>Mira este video corto antes de continuar</b><span>Menos de 2 minutos</span></div></div><p class="sub">Con tu compra recibiste los 5 menús visuales: 13 combinaciones de un día para pegar en el refrigerador. El Plan 30 Días te dice qué comer en cada comida, todos los días del mes, con la porción y la lista del súper de cada semana.</p><a class="go" href="#oferta">Ver la oferta ↓</a></div><div class="hl">Los menús visuales te dan <b>un ejemplo de día</b>. El plan te da <b>el mes entero resuelto</b>: no tienes que decidir nada, solo seguirlo.</div><div class="card"><div class="k">La diferencia</div><div class="t">Lo que ya tienes vs. lo que suma el plan</div><table class="cmp"><tr><th></th><th>Ya lo tienes</th><th class="y">Plan 30 Días</th></tr><tr><td class="r">Menús</td><td>13 combinaciones de 1 día</td><td class="y">30 días distintos en cada franja (150 días ya armados)</td></tr><tr><td class="r">Compras</td><td>1 lista general con los ingredientes de las 50 recetas</td><td class="y">La lista de cada una de las 4 semanas, solo con lo que vas a usar</td></tr><tr><td class="r">Porciones</td><td>Porción fija de cada receta</td><td class="y">La porción ya ajustada a tu franja, comida por comida</td></tr><tr><td class="r">Si algo falla</td><td>Empiezas de cero</td><td class="y">Cambios equivalentes y Protocolo de Recomienzo para volver al plan</td></tr><tr><td class="r">Progreso</td><td>Nada que marcar</td><td class="y">Diario de 30 días para ver tu avance</td></tr></table></div><div class="card red"><div class="k">Plan 30 Días · El Nuevo Apetito</div><div class="t">Lo que recibes</div><ul class="check"><li><b>5 planes de 30 días</b> por franja de calorías, para elegir el tuyo</li><li>Armados con <b>las mismas recetas que acabas de comprar</b>: nada nuevo que aprender</li><li><b>Listas de compras</b> de cada semana, por sección del supermercado</li><li><b>Cambios equivalentes</b> para cambiar una receta que no te guste</li><li><b>Guía de porciones y hambre</b> para ajustar el plan a tu cuerpo</li><li><b>Protocolo de Recomienzo</b>: qué hacer el día en que te sales del plan</li><li><b>Diario de 30 días</b> para marcar tu progreso</li></ul><div class="kcal"><div>1200<small>kcal</small></div><div>1500<small>kcal</small></div><div>1700<small>kcal</small></div><div>2000<small>kcal</small></div><div>2500<small>kcal</small></div></div></div><div class="card" style="text-align:center"><div class="k">Cómo funciona</div><div class="t">Cocina 1, come 2</div><p style="color:#cfcfcf;font-size:15px">La cena de hoy es el almuerzo de mañana. Cocinas una sola receta por día y el plan ya trae la porción correcta para tu franja de calorías. Sin cuentas y sin decidir todos los días qué comer.</p></div>
-<div class="price" id="oferta"><div class="tag">OFERTA ÚNICA · SOLO EN ESTA PÁGINA</div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>19</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Solo <b>US$ 0,63 por día</b> para tener los 30 días resueltos</div><div class="vs">Menos que un solo pedido de delivery.</div><div class="note">Solo en esta página · valor aproximado en dólares; el cargo final se muestra en tu moneda local</div></div>
+<div class="bar"><span class="dot"></span>ESPERA: TU PEDIDO TODAVÍA NO TERMINÓ<small>NO CIERRES ESTA PÁGINA</small></div><div class="wrap"><div class="hero"><div class="prog"><div class="s done"><div class="c">✓</div>Compra confirmada</div><div class="ln g"></div><div class="s on"><div class="c">2</div>Oferta única</div><div class="ln"></div><div class="s "><div class="c">3</div>Acceso</div></div><div class="kick">Exclusivo para quien acaba de comprar</div><h1>Ya tienes las recetas. <em>Ahora deja de pensar</em> qué comer durante 90 días.</h1><img class="heroimg" src="img/up-hero.jpg" alt="" width="1152" height="648"><p class="sub">El Programa 90 Días te dice exactamente qué comer en cada comida, qué comprar cada semana y qué preparar el domingo. Tú solo abres, sigues y comes.</p><a class="go" href="#oferta">Ver la oferta ↓</a></div>
+<div class="hl">No te falta fuerza de voluntad. <b>Te falta un plan que decida por ti.</b> Tener recetas es el primer paso, pero todos los días tienes que decidir qué comer 4 o 5 veces, y esas decisiones cansan.</div>
+<div class="card"><div class="k">La diferencia</div><div class="t">Lo que ya tienes vs. lo que suma el programa</div><table class="cmp"><tr><th></th><th>Edición Completa</th><th class="y">Programa 90 Días</th></tr>
+<tr><td class="r">Menús</td><td>Menú de 7 días</td><td class="y">12 semanas de menús, comida por comida</td></tr>
+<tr><td class="r">Recetas</td><td>300 recetas</td><td class="y">+100 recetas exclusivas que no están en tu libro</td></tr>
+<tr><td class="r">Compras</td><td>1 lista general</td><td class="y">12 listas, una por semana, por sección del súper</td></tr>
+<tr><td class="r">Preparación</td><td>Decides tú</td><td class="y">12 planes de domingo: qué cocinar y en qué orden (unas 2 h)</td></tr>
+<tr><td class="r">Celular</td><td>Nada</td><td class="y">240 menús en imagen para guardar en tu galería</td></tr>
+<tr><td class="r">Si algo falla</td><td>Empiezas de cero</td><td class="y">Guías para días difíciles y Protocolo de Recomienzo</td></tr>
+<tr><td class="r">Progreso</td><td>Nada que marcar</td><td class="y">Diario de 90 días con revisiones en los días 30, 60 y 90</td></tr></table></div>
+<div class="card" style="text-align:center"><div class="k">Así se ve en tu celular</div><div class="t">Abres la galería y ya sabes qué comer hoy</div><p style="color:#cfcfcf;font-size:15px">Cada día con sus 5 comidas, calorías y proteína ya calculadas. Separado por nivel, para que guardes solo el tuyo.</p><div class="phones"><img src="img/cel-1.jpg" alt="Menú semana 1" loading="lazy"><img src="img/cel-2.jpg" alt="Menú semana 1" loading="lazy"><img src="img/cel-3.jpg" alt="Menú semana 1" loading="lazy"></div></div>
+<div class="card red"><div class="k">Programa 90 Días · El Nuevo Apetito</div><div class="t">Lo que recibes</div><ul class="check">
+<li><b>12 semanas de menús listos</b>: desayuno, colación, almuerzo, merienda y cena de cada día</li>
+<li><b>5 niveles de calorías</b>, para que el plan se adapte a ti y no al revés</li>
+<li><b>100 recetas exclusivas</b> que no están en tu libro</li>
+<li><b>12 listas de compras</b>, una por semana, organizadas por sección</li>
+<li><b>12 planes de preparación</b> para dejar la semana lista el domingo</li>
+<li><b>12 hojas de refrigerador</b> para imprimir: la semana entera de un vistazo</li>
+<li><b>240 menús para el celular</b>, listos para guardar en la galería</li>
+<li><b>Guía "Empieza hoy"</b>: qué hacer en tus primeras 24 horas</li>
+<li><b>Guías para días difíciles</b>: poco apetito, mucha hambre, antojos, fiestas, restaurantes y viajes</li>
+<li><b>Protocolo de Recomienzo</b> y <b>Diario de 90 días</b></li></ul><div class="kcal"><div>1200<small>kcal</small></div><div>1400<small>kcal</small></div><div>1600<small>kcal</small></div><div>1800<small>kcal</small></div><div>2000<small>kcal</small></div></div></div>
+<div class="card" style="text-align:center"><div class="k">Cómo funciona</div><div class="t">4 pasos, cero decisiones</div><ol class="steps"><li><b>Elige tu nivel</b> de calorías (2 minutos)</li><li><b>Compra</b> con la lista de la semana</li><li><b>Prepara</b> el domingo siguiendo el plan</li><li><b>Come</b> siguiendo tu menú y marca tu avance</li></ol></div>
+<div class="card"><p class="anc">Un plan de alimentación semanal con un profesional suele costar mucho más que esto, y casi siempre se paga <b>mes a mes</b>. Aquí tienes <b>3 meses completos</b> por un único pago.</p></div>
+<div class="price" id="oferta"><div class="tag">OFERTA ÚNICA · SOLO EN ESTA PÁGINA</div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>27</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Solo <b>US$ 0,30 por día</b> para tener 3 meses resueltos</div><div class="vs">Menos que un café por día.</div><div class="note">Solo en esta página · el cargo final se muestra en tu moneda local</div></div>
 <div class="hotmart-funnel" style="margin:18px 0 8px;text-align:center"><!-- HOTMART - Sales Funnel Widget -->
 <div id="hotmart-sales-funnel"></div>
 <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
@@ -73,7 +120,6 @@ ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39
 checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
 </script>
 <!-- HOTMART - Sales Funnel Widget --></div>
-
 <div class="guar"><b>7 días de garantía</b><p>Si no es para ti, pides el reembolso y te devolvemos el 100%, sin preguntas.</p></div>
-<p class="disc">Los planes son menús educativos y genéricos por franja de calorías, armados con las recetas del ebook. No sustituyen la orientación individual de un(a) nutricionista o médico(a).</p>
+<p class="disc">Programa educativo con menús genéricos por nivel de calorías. No sustituye la orientación individual de un(a) nutricionista o médico(a).</p>
 </div></body></html>

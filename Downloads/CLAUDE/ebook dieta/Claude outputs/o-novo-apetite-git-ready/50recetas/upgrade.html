@@ -1,0 +1,114 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex"><title>Espera: 300 recetas por US$ 10 más</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0e0e0e;color:#f2f2f2;font-family:'Montserrat','Segoe UI',Arial,sans-serif;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding:28px 18px 60px}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 rgba(225,29,42,.55)}70%{box-shadow:0 0 0 12px rgba(225,29,42,0)}}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.bar{background:linear-gradient(90deg,#b3121f,#e11d2a,#ff3b47,#e11d2a,#b3121f);background-size:200% 100%;animation:shine 4s linear infinite;color:#fff;text-align:center;font-weight:800;font-size:14px;letter-spacing:1px;padding:12px 12px 10px;line-height:1.3}
+.bar small{display:block;font-size:11px;font-weight:700;letter-spacing:2px;opacity:.9;margin-top:3px}
+.bar .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-right:8px;animation:pulse 1s infinite;vertical-align:1px}
+.hero{position:relative;margin:-28px -18px 22px;padding:26px 18px 28px;background:radial-gradient(90% 70% at 50% 0%,rgba(225,29,42,.30) 0%,rgba(225,29,42,.06) 55%,transparent 100%)}
+.prog{display:flex;align-items:center;justify-content:center;gap:0;margin:0 auto 22px;max-width:420px}
+.prog .s{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:#7a7a7a;width:96px;text-align:center}
+.prog .c{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;background:#1a1a1a;border:2px solid #333;color:#7a7a7a}
+.prog .done{color:#4ade80}.prog .done .c{background:#22c55e;border-color:#22c55e;color:#06210f}
+.prog .on{color:#fff}.prog .on .c{background:#e11d2a;border-color:#e11d2a;color:#fff;animation:glow 1.6s infinite}
+.prog .ln{flex:1;height:3px;background:#333;margin-bottom:22px;border-radius:2px}.prog .ln.g{background:linear-gradient(90deg,#22c55e,#e11d2a)}
+.kick{display:table;margin:0 auto 14px;background:rgba(225,29,42,.15);border:1px solid #e11d2a;color:#ffb3b8;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:7px 14px;border-radius:999px}
+h1{font-size:34px;line-height:1.15;font-weight:800;text-align:center;margin-bottom:18px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:#fff;background:linear-gradient(180deg,transparent 58%,rgba(225,29,42,.85) 58%);padding:0 4px;border-radius:2px}
+.vsl{position:relative;width:100%;aspect-ratio:16/9;border-radius:16px;overflow:hidden;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);background:#000;margin:0 auto 18px}
+.vsl iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vsl .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:radial-gradient(70% 70% at 50% 45%,#2a0f12 0%,#0b0b0b 100%)}
+.vsl .play{width:78px;height:78px;border-radius:50%;background:#e11d2a;display:flex;align-items:center;justify-content:center;animation:glow 1.6s infinite}
+.vsl .play:after{content:"";border-left:24px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:6px}
+.vsl .ph b{font-size:15px;color:#fff;letter-spacing:.5px}.vsl .ph span{font-size:12px;color:#9a9a9a}
+.sub{text-align:center;color:#dcdcdc;font-size:17px;max-width:600px;margin:0 auto 18px}
+.go{display:table;margin:0 auto;background:#22c55e;color:#06210f;font-weight:800;font-size:15px;letter-spacing:.5px;padding:13px 22px;border-radius:12px;text-decoration:none;box-shadow:0 8px 20px rgba(34,197,94,.3)}
+.card{background:#1a1a1a;border:1px solid #2a2a2a;border-radius:16px;padding:24px 22px;margin-bottom:16px}
+.card.red{border-color:#e11d2a}
+.k{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#e11d2a;font-weight:800;margin-bottom:6px}
+.t{font-size:21px;font-weight:800;margin-bottom:8px}
+ul.check{list-style:none}
+ul.check li{padding:9px 0 9px 32px;position:relative;border-bottom:1px solid #262626;font-size:15px;color:#e6e6e6}
+ul.check li:before{content:"✓";position:absolute;left:4px;top:8px;color:#6fd39a;font-weight:800}
+.kcal{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.kcal div{flex:1 1 18%;min-width:80px;background:#121212;border:1px solid #2a2a2a;border-radius:10px;text-align:center;padding:10px 0;font-weight:800;color:#e11d2a}
+.kcal small{display:block;color:#fff;font-size:11px}
+.price{position:relative;text-align:center;margin:30px 0 18px;padding:34px 18px 22px;border-radius:20px;background:radial-gradient(120% 90% at 50% 0%,rgba(34,197,94,.32) 0%,rgba(34,197,94,.08) 45%,#0e1410 100%);border:2px solid #22c55e;box-shadow:0 0 0 6px rgba(34,197,94,.12),0 18px 40px rgba(34,197,94,.22)}
+.price .tag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:#22c55e;color:#06210f;font-size:12px;font-weight:800;letter-spacing:2px;padding:7px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 6px 16px rgba(34,197,94,.45)}
+.price .old{color:#9a9a9a;font-size:16px;font-weight:600}
+.price .old s{color:#bdbdbd}
+.price .pre{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#bbf7d0;font-weight:700;margin-top:6px}
+.price .new{font-size:64px;line-height:1;font-weight:800;color:#fff;margin:8px 0 6px;text-shadow:0 0 28px rgba(255,255,255,.25)}
+.price .new small{font-size:26px;vertical-align:top;position:relative;top:8px;margin-right:4px;color:#bbf7d0}
+.price .once{display:inline-block;background:rgba(34,197,94,.15);border:1px solid #22c55e;color:#86efac;font-size:13px;font-weight:800;letter-spacing:1px;border-radius:999px;padding:6px 14px;margin:4px 0 12px}
+.price .day{font-size:17px;color:#fff;font-weight:700}
+.price .day b{color:#4ade80}
+.price .vs{font-size:14px;color:#d6d6d6;margin-top:4px}
+.price .note{font-size:11px;color:#8a8a8a;margin-top:14px}
+.kiwify{margin:18px 0 8px;text-align:center}
+.no{display:block;text-align:center;color:#8a8a8a;font-size:13px;margin-top:14px;text-decoration:underline}
+.guar{display:flex;flex-direction:column;gap:6px;align-items:center;text-align:center;background:#0f2419;border-radius:14px;padding:16px 18px;margin-top:22px}
+.guar b{font-size:22px;color:#6fd39a;font-weight:800}
+.guar p{font-size:14px;color:#dfeee4}
+.cmp{width:100%;border-collapse:collapse;margin-top:6px;font-size:14px}
+.cmp th{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:8px 6px;text-align:left;color:#8a8a8a}
+.cmp th.y{color:#e11d2a}
+.cmp td{padding:10px 6px;border-top:1px solid #262626;vertical-align:top;color:#bdbdbd;line-height:1.4}
+.cmp td.y{color:#fff;font-weight:600}
+.cmp td.r{color:#8a8a8a;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;width:22%}
+.hl{background:#1f1214;border:1px solid #3a1a1d;border-radius:12px;padding:14px 16px;margin:0 0 16px;font-size:15px;color:#e6e6e6;text-align:center}
+.hl b{color:#fff}
+.disc{text-align:center;font-size:11px;color:#6f6f6f;margin-top:28px}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
+
+.heroimg{width:100%;border-radius:16px;border:2px solid #e11d2a;box-shadow:0 0 0 5px rgba(225,29,42,.15),0 20px 50px rgba(0,0,0,.6);display:block;margin:0 auto 18px;aspect-ratio:16/9;height:auto;object-fit:cover}
+.phones{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.phones img{width:31%;max-width:190px;border-radius:14px;border:2px solid #2a2a2a;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.phones img:nth-child(2){transform:translateY(-10px);border-color:#e11d2a}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px;margin-top:8px;text-align:left}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 52px;background:#121212;border:1px solid #2a2a2a;border-radius:12px;font-size:15px;color:#e6e6e6}
+.steps li:before{content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:#e11d2a;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.steps b{color:#fff}
+.anc{text-align:center;color:#cfcfcf;font-size:15px}
+.anc b{color:#fff}
+@media(max-width:520px){h1{font-size:28px}.cmp{font-size:13px}.price .new{font-size:56px}}
+</style><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');var nvaEid;try{nvaEid=localStorage.getItem('nva_eid');if(!nvaEid){nvaEid='v'+Date.now().toString(36)+Math.random().toString(36).slice(2,10);localStorage.setItem('nva_eid',nvaEid);}}catch(e){}fbq('init','1771961234064362',nvaEid?{external_id:nvaEid}:{});fbq('track','PageView');</script></head><body>
+<div class="bar"><span class="dot"></span>ESPERA: TU PEDIDO TODAVÍA NO TERMINÓ<small>NO CIERRES ESTA PÁGINA</small></div><div class="wrap"><div class="hero"><div class="prog"><div class="s done"><div class="c">✓</div>Compra confirmada</div><div class="ln g"></div><div class="s on"><div class="c">2</div>Mejora tu pedido</div><div class="ln"></div><div class="s "><div class="c">3</div>Acceso</div></div><div class="kick">Solo para quien eligió la Edición Esencial</div><h1>Por solo US$ 10 más, llévate <em>300 recetas</em> en lugar de 100.</h1><img class="heroimg" src="img/upg-hero.jpg" alt="" width="1152" height="648"><p class="sub">Ya pagaste por 100. Por US$ 10 más recibes 200 recetas extra y todos los bonos. Si cierras esta página, la Edición Completa vuelve a costar US$ 15.</p><a class="go" href="#oferta">Ver la oferta ↓</a></div>
+<div class="hl">La mayoría abandona por una razón: <b>se aburre de comer siempre lo mismo.</b> Por eso la Edición Completa tiene el triple de recetas y las herramientas que hacen todo más fácil.</div>
+<div class="card"><div class="k">La diferencia</div><div class="t">Lo que tienes vs. la Edición Completa</div><table class="cmp"><tr><th></th><th>Esencial</th><th class="y">Completa</th></tr>
+<tr><td class="r">Recetas</td><td>100</td><td class="y">300, en 10 categorías</td></tr>
+<tr><td class="r">Menú</td><td>No</td><td class="y">Menú de 7 días listo para seguir</td></tr>
+<tr><td class="r">Compras</td><td>No</td><td class="y">Lista por sección del supermercado</td></tr>
+<tr><td class="r">Índice</td><td>No</td><td class="y">Índice por proteína: busca por lo que tienes en el refri</td></tr>
+<tr><td class="r">Fuera de casa</td><td>No</td><td class="y">Guía "Arma tu plato"</td></tr></table></div>
+<div class="card red"><div class="k">Edición Completa · El Nuevo Apetito</div><div class="t">Lo que recibes</div><ul class="check">
+<li><b>300 recetas</b>: desayunos, panes y tortillas, snacks, almuerzos, cenas ligeras, sopas, meal prep, freidora de aire, postres y batidos</li>
+<li><b>Menú de 7 días</b> y <b>lista de compras</b></li>
+<li><b>Índice por proteína</b> y guía <b>"Arma tu plato"</b></li>
+<li>Calorías y proteína calculadas en cada receta</li></ul></div>
+<div class="price" id="oferta"><div class="tag">OFERTA ÚNICA · SOLO EN ESTA PÁGINA</div><div class="pre">Hoy, para ti</div><div class="new"><small>US$</small>10</div><div class="once">PAGO ÚNICO · ACCESO DE POR VIDA</div><div class="day">Son <b>5 centavos</b> por cada receta extra</div><div class="vs">200 recetas más y todos los bonos.</div><div class="note">Solo en esta página · el cargo final se muestra en tu moneda local</div></div>
+<div class="hotmart-funnel" style="margin:18px 0 8px;text-align:center"><!-- HOTMART - Sales Funnel Widget -->
+<div id="hotmart-sales-funnel"></div>
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget --></div>
+<div class="guar"><b>7 días de garantía</b><p>Si no es para ti, pides el reembolso y te devolvemos el 100%, sin preguntas.</p></div>
+<p class="disc">Programa educativo con menús genéricos por nivel de calorías. No sustituye la orientación individual de un(a) nutricionista o médico(a).</p>
+</div></body></html>
